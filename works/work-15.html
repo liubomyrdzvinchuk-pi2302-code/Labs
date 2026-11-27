@@ -11,34 +11,6 @@
 <p><button onclick="location.href='#task-1'">Завдання 1</button> <button onclick="location.href='#task-2'">Завдання 2</button> <button onclick="location.href='#task-3'">Завдання 3</button> </p>
 <hr>
 <h2 id="task-1">Завдання 1. Список справ (To-Do)</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-li.done span{text-decoration:line-through;color:#888}
-li{margin:6px 0}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;input id=&quot;i&quot; placeholder=&quot;Нове завдання&quot;&gt; &lt;button id=&quot;a&quot;&gt;Додати&lt;/button&gt;
-&lt;ul id=&quot;l&quot;&gt;&lt;/ul&gt;
-&lt;script&gt;
-a.onclick=()=&gt;{
-  if(!i.value.trim()) return;
-  const li=document.createElement(&#x27;li&#x27;);
-  li.innerHTML=&#x27;&lt;input type=&quot;checkbox&quot;&gt; &lt;span&gt;&lt;/span&gt; &lt;button&gt;✕&lt;/button&gt;&#x27;;
-  li.querySelector(&#x27;span&#x27;).textContent=i.value;
-  li.querySelector(&#x27;input&#x27;).onchange=e=&gt;li.classList.toggle(&#x27;done&#x27;,e.target.checked);
-  li.querySelector(&#x27;button&#x27;).onclick=()=&gt;li.remove();
-  l.appendChild(li); i.value=&#x27;&#x27;;
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -69,27 +41,6 @@ a.onclick=()=&gt;{
 " title="Завдання 1"></iframe>
 <hr>
 <h2 id="task-2">Завдання 2. Калькулятор</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;input id=&quot;x&quot; type=&quot;number&quot; value=&quot;8&quot;&gt; &lt;select id=&quot;op&quot;&gt;&lt;option&gt;+&lt;/option&gt;&lt;option&gt;−&lt;/option&gt;&lt;option&gt;×&lt;/option&gt;&lt;option&gt;÷&lt;/option&gt;&lt;/select&gt; &lt;input id=&quot;y&quot; type=&quot;number&quot; value=&quot;2&quot;&gt; &lt;button id=&quot;eq&quot;&gt;=&lt;/button&gt; &lt;b id=&quot;r&quot;&gt;&lt;/b&gt;
-&lt;script&gt;
-eq.onclick=()=&gt;{
-  const a=+x.value,b=+y.value;
-  const f={&#x27;+&#x27;:a+b,&#x27;−&#x27;:a-b,&#x27;×&#x27;:a*b,&#x27;÷&#x27;:b?a/b:&#x27;ділення на 0&#x27;};
-  r.textContent=f[op.value];
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -113,30 +64,6 @@ eq.onclick=()=&gt;{
 " title="Завдання 2"></iframe>
 <hr>
 <h2 id="task-3">Завдання 3. Галерея з фільтром</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.g{display:flex;gap:8px;margin-top:10px}
-.g div{width:60px;height:60px;border-radius:8px}
-.red{background:#e53935}.blue{background:#1e88e5}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button data-c=&quot;all&quot;&gt;Усі&lt;/button&gt; &lt;button data-c=&quot;red&quot;&gt;Червоні&lt;/button&gt; &lt;button data-c=&quot;blue&quot;&gt;Сині&lt;/button&gt;
-&lt;div class=&quot;g&quot;&gt;&lt;div class=&quot;red&quot;&gt;&lt;/div&gt;&lt;div class=&quot;blue&quot;&gt;&lt;/div&gt;&lt;div class=&quot;red&quot;&gt;&lt;/div&gt;&lt;div class=&quot;blue&quot;&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;script&gt;
-document.querySelectorAll(&#x27;button&#x27;).forEach(b=&gt;b.onclick=()=&gt;{
-  document.querySelectorAll(&#x27;.g div&#x27;).forEach(d=&gt;
-    d.style.display=(b.dataset.c===&#x27;all&#x27;||d.classList.contains(b.dataset.c))?&#x27;&#x27;:&#x27;none&#x27;);
-});
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;

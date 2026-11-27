@@ -11,26 +11,6 @@
 <p><button onclick="location.href='#task-1'">Завдання 1</button> <button onclick="location.href='#task-2'">Завдання 2</button> <button onclick="location.href='#task-3'">Завдання 3</button> <button onclick="location.href='#task-4'">Завдання 4</button> <button onclick="location.href='#task-5'">Завдання 5</button> <button onclick="location.href='#task-6'">Завдання 6</button> <button onclick="location.href='#task-7'">Завдання 7</button> </p>
 <hr>
 <h2 id="task-1">Рівень 4-6, завдання 1</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;run&quot;&gt;Виконати&lt;/button&gt;
-&lt;div id=&quot;res&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;module&quot;&gt;
-const res = document.getElementById(&#x27;res&#x27;);
-document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
-  res.innerHTML = &#x27;&#x27;;
-  alert(&#x27;Натисніть ОК&#x27;);
-  res.textContent = &#x27;Hello, Дзвінчук Любомир!&#x27;;
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -53,26 +33,6 @@ document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
 " title="Завдання 1"></iframe>
 <hr>
 <h2 id="task-2">Рівень 4-6, завдання 2</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;run&quot;&gt;Виконати&lt;/button&gt;
-&lt;div id=&quot;res&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;module&quot;&gt;
-const res = document.getElementById(&#x27;res&#x27;);
-document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
-  res.innerHTML = &#x27;&#x27;;
-  const ok = confirm(&#x27;Натисніть Ок або Відміна&#x27;);
-  res.textContent = ok ? &#x27;Натиснуто кнопку «Ок»&#x27; : &#x27;Натиснуто кнопку «Відміна»&#x27;;
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -95,30 +55,6 @@ document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
 " title="Завдання 2"></iframe>
 <hr>
 <h2 id="task-3">Рівень 4-6, завдання 3</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;run&quot;&gt;Виконати&lt;/button&gt;
-&lt;div id=&quot;res&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;module&quot;&gt;
-const res = document.getElementById(&#x27;res&#x27;);
-document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
-  res.innerHTML = &#x27;&#x27;;
-  const n = 4;
-  for (let i = 1; i &lt;= 10; i++) {
-    const p = document.createElement(&#x27;p&#x27;);
-    p.textContent = `${n} × ${i} = ${n * i}`;
-    res.appendChild(p);
-  }
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -145,32 +81,6 @@ document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
 " title="Завдання 3"></iframe>
 <hr>
 <h2 id="task-4">Рівень 7-9, завдання 1</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;run&quot;&gt;Виконати&lt;/button&gt;
-&lt;div id=&quot;res&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;module&quot;&gt;
-const res = document.getElementById(&#x27;res&#x27;);
-document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
-  res.innerHTML = &#x27;&#x27;;
-  function checkParity(num) {
-    const p = document.createElement(&#x27;p&#x27;);
-    const even = num % 2 === 0;
-    p.textContent = `Число ${num} — ${even ? &#x27;парне&#x27; : &#x27;непарне&#x27;}`;
-    p.style.color = even ? &#x27;green&#x27; : &#x27;red&#x27;;
-    res.appendChild(p);
-  }
-  checkParity(4);
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -199,30 +109,6 @@ document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
 " title="Завдання 4"></iframe>
 <hr>
 <h2 id="task-5">Рівень 7-9, завдання 2</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;run&quot;&gt;Виконати&lt;/button&gt;
-&lt;div id=&quot;res&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;module&quot;&gt;
-const res = document.getElementById(&#x27;res&#x27;);
-document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
-  res.innerHTML = &#x27;&#x27;;
-  function createPassword(name, num) {
-    return name.slice(0, 3) + num * 2;
-  }
-  const div = document.createElement(&#x27;div&#x27;);
-  div.textContent = createPassword(&#x27;Любомир&#x27;, 4);
-  res.appendChild(div);
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -249,34 +135,6 @@ document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
 " title="Завдання 5"></iframe>
 <hr>
 <h2 id="task-6">Рівень 7-9, завдання 3</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;run&quot;&gt;Виконати&lt;/button&gt;
-&lt;div id=&quot;res&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;module&quot;&gt;
-const res = document.getElementById(&#x27;res&#x27;);
-document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
-  res.innerHTML = &#x27;&#x27;;
-  function average() {
-    const a = Number(prompt(&#x27;Оцінка 1:&#x27;));
-    const b = Number(prompt(&#x27;Оцінка 2:&#x27;));
-    const c = Number(prompt(&#x27;Оцінка 3:&#x27;));
-    const div = document.createElement(&#x27;div&#x27;);
-    div.id = &#x27;4&#x27;;
-    div.textContent = `Середнє: ${((a + b + c) / 3).toFixed(2)}`;
-    res.appendChild(div);
-  }
-  average();
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -307,33 +165,6 @@ document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
 " title="Завдання 6"></iframe>
 <hr>
 <h2 id="task-7">Рівень 7-9, завдання 4</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;run&quot;&gt;Виконати&lt;/button&gt;
-&lt;div id=&quot;res&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;module&quot;&gt;
-const res = document.getElementById(&#x27;res&#x27;);
-document.getElementById(&#x27;run&#x27;).onclick = () =&gt; {
-  res.innerHTML = &#x27;&#x27;;
-  const count = Number(prompt(&#x27;Скільки студентів у групі?&#x27;));
-  const list = document.createElement(&#x27;ol&#x27;);
-  res.appendChild(list);
-  for (let i = 1; i &lt;= count; i++) {
-    const name = prompt(`Прізвище та ім’я студента ${i}:`);
-    const li = document.createElement(&#x27;li&#x27;);
-    li.textContent = name;
-    list.appendChild(li);
-  }
-};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;

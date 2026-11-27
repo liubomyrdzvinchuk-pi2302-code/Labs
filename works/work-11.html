@@ -11,28 +11,6 @@
 <p><button onclick="location.href='#task-1'">Завдання 1</button> <button onclick="location.href='#task-2'">Завдання 2</button> <button onclick="location.href='#task-3'">Завдання 3</button> </p>
 <hr>
 <h2 id="task-1">Завдання 1. Методи масиву</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
-&lt;script&gt;
-const a=[1,2,3,4,5,6];
-const sq=a.map(x=&gt;x*x);
-const ev=a.filter(x=&gt;x%2===0);
-const sum=a.reduce((s,x)=&gt;s+x,0);
-document.getElementById(&#x27;o&#x27;).textContent=
- `Квадрати: ${sq}\nПарні: ${ev}\nСума: ${sum}`;
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -57,27 +35,6 @@ document.getElementById(&#x27;o&#x27;).textContent=
 " title="Завдання 1"></iframe>
 <hr>
 <h2 id="task-2">Завдання 2. Масив об’єктів</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
-&lt;script&gt;
-const st=[{n:&#x27;Оля&#x27;,s:88},{n:&#x27;Іван&#x27;,s:75},{n:&#x27;Марія&#x27;,s:95}];
-st.sort((a,b)=&gt;b.s-a.s);
-const avg=st.reduce((s,x)=&gt;s+x.s,0)/st.length;
-document.getElementById(&#x27;o&#x27;).textContent=
- st.map(x=&gt;x.n+&#x27;: &#x27;+x.s).join(&#x27;\n&#x27;)+&#x27;\nСередній: &#x27;+avg.toFixed(1);
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
@@ -101,27 +58,6 @@ document.getElementById(&#x27;o&#x27;).textContent=
 " title="Завдання 2"></iframe>
 <hr>
 <h2 id="task-3">Завдання 3. Деструктуризація і spread</h2>
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
-&lt;script&gt;
-const user={name:&#x27;Ася&#x27;,age:20};
-const extra={city:&#x27;Київ&#x27;};
-const full={...user,...extra,age:21};
-const {name,city}=full;
-document.getElementById(&#x27;o&#x27;).textContent=JSON.stringify(full)+&#x27;\n&#x27;+name+&#x27; з &#x27;+city;
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
 <iframe width="100%" height="220" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
