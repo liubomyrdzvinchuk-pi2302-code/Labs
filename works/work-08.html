@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 8. Адаптивний дизайн</title>
-<link rel="stylesheet" href="../style.css">
+<title>Робота 8</title>
 </head>
 <body>
-<!--w-->
-<div class="wrap">
-<nav class="top"><a href="work-07.html">← Робота 7</a><a href="../index.html">☰ Усі роботи</a><a href="work-09.html">Робота 9 →</a></nav>
+<p><a href="../index.html">Головна</a> | <a href="work-07.html">Попередня</a> | <a href="work-09.html">Наступна</a></p>
 <h1>Робота 8. Адаптивний дизайн</h1>
-<p style="color:var(--mut)">Meta viewport, media queries, відносні одиниці.</p>
-<section class="task">
-<h2>Завдання 1. Відносні одиниці</h2>
-<p class="cond">Використайте rem, em, % та vw для адаптивних розмірів.</p>
-<div class="cols">
-<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+<ul>
+<li><a href="#task-1">Завдання 1</a></li>
+<li><a href="#task-2">Завдання 2</a></li>
+<li><a href="#task-3">Завдання 3</a></li>
+</ul>
+<hr>
+<h2 id="task-1">Завдання 1. Відносні одиниці</h2>
+<p>Використайте rem, em, % та vw для адаптивних розмірів.</p>
+<h3>Код</h3>
+<pre>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -30,8 +31,9 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;a&quot;&gt;Ширина 80%, шрифт 1.5rem&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div>
-<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+</pre>
+<h3>Результат</h3>
+<iframe width="100%" height="260" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -45,14 +47,12 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;a&quot;&gt;Ширина 80%, шрифт 1.5rem&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-" title="Результат завдання 1"></iframe></div>
-</div>
-</section>
-<section class="task">
-<h2>Завдання 2. Media query</h2>
-<p class="cond">Змініть колір фону та розкладку при ширині менше 500px.</p>
-<div class="cols">
-<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+" title="Завдання 1"></iframe>
+<hr>
+<h2 id="task-2">Завдання 2. Media query</h2>
+<p>Змініть колір фону та розкладку при ширині менше 500px.</p>
+<h3>Код</h3>
+<pre>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -67,8 +67,9 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;m&quot;&gt;Зменшіть вікно, щоб побачити зміну&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div>
-<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+</pre>
+<h3>Результат</h3>
+<iframe width="100%" height="260" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -83,14 +84,12 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;m&quot;&gt;Зменшіть вікно, щоб побачити зміну&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-" title="Результат завдання 2"></iframe></div>
-</div>
-</section>
-<section class="task">
-<h2>Завдання 3. Адаптивне меню</h2>
-<p class="cond">Меню у рядок на великих екранах і стовпчиком на малих.</p>
-<div class="cols">
-<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+" title="Завдання 2"></iframe>
+<hr>
+<h2 id="task-3">Завдання 3. Адаптивне меню</h2>
+<p>Меню у рядок на великих екранах і стовпчиком на малих.</p>
+<h3>Код</h3>
+<pre>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -106,8 +105,9 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;nav class=&quot;n&quot;&gt;&lt;a href=&quot;#&quot;&gt;Дім&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Новини&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Про нас&lt;/a&gt;&lt;/nav&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div>
-<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+</pre>
+<h3>Результат</h3>
+<iframe width="100%" height="260" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -123,10 +123,8 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;nav class=&quot;n&quot;&gt;&lt;a href=&quot;#&quot;&gt;Дім&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Новини&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Про нас&lt;/a&gt;&lt;/nav&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-" title="Результат завдання 3"></iframe></div>
-</div>
-</section>
-<nav class="top"><a href="work-07.html">← Робота 7</a><a href="../index.html">☰ Усі роботи</a><a href="work-09.html">Робота 9 →</a></nav>
-</div>
+" title="Завдання 3"></iframe>
+<hr>
+<p><a href="../index.html">Головна</a> | <a href="work-07.html">Попередня</a> | <a href="work-09.html">Наступна</a></p>
 </body>
 </html>

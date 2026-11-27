@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 7. CSS: Grid</title>
-<link rel="stylesheet" href="../style.css">
+<title>Робота 7</title>
 </head>
 <body>
-<!--w-->
-<div class="wrap">
-<nav class="top"><a href="work-06.html">← Робота 6</a><a href="../index.html">☰ Усі роботи</a><a href="work-08.html">Робота 8 →</a></nav>
+<p><a href="../index.html">Головна</a> | <a href="work-06.html">Попередня</a> | <a href="work-08.html">Наступна</a></p>
 <h1>Робота 7. CSS: Grid</h1>
-<p style="color:var(--mut)">Двовимірні сітки: колонки, області, відступи.</p>
-<section class="task">
-<h2>Завдання 1. Сітка 3×2</h2>
-<p class="cond">Створіть сітку з трьох колонок та шести комірок.</p>
-<div class="cols">
-<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+<ul>
+<li><a href="#task-1">Завдання 1</a></li>
+<li><a href="#task-2">Завдання 2</a></li>
+<li><a href="#task-3">Завдання 3</a></li>
+</ul>
+<hr>
+<h2 id="task-1">Завдання 1. Сітка 3×2</h2>
+<p>Створіть сітку з трьох колонок та шести комірок.</p>
+<h3>Код</h3>
+<pre>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -31,8 +32,9 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;g&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div>
-<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+</pre>
+<h3>Результат</h3>
+<iframe width="100%" height="260" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -47,14 +49,12 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;g&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-" title="Результат завдання 1"></iframe></div>
-</div>
-</section>
-<section class="task">
-<h2>Завдання 2. Макет сторінки</h2>
-<p class="cond">Побудуйте макет header / sidebar / content / footer через grid-template-areas.</p>
-<div class="cols">
-<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+" title="Завдання 1"></iframe>
+<hr>
+<h2 id="task-2">Завдання 2. Макет сторінки</h2>
+<p>Побудуйте макет header / sidebar / content / footer через grid-template-areas.</p>
+<h3>Код</h3>
+<pre>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -70,8 +70,9 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;l&quot;&gt;&lt;header&gt;Header&lt;/header&gt;&lt;aside&gt;Sidebar&lt;/aside&gt;&lt;main&gt;Content&lt;/main&gt;&lt;footer&gt;Footer&lt;/footer&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div>
-<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+</pre>
+<h3>Результат</h3>
+<iframe width="100%" height="260" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -87,14 +88,12 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;l&quot;&gt;&lt;header&gt;Header&lt;/header&gt;&lt;aside&gt;Sidebar&lt;/aside&gt;&lt;main&gt;Content&lt;/main&gt;&lt;footer&gt;Footer&lt;/footer&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-" title="Результат завдання 2"></iframe></div>
-</div>
-</section>
-<section class="task">
-<h2>Завдання 3. Адаптивна галерея</h2>
-<p class="cond">Зробіть галерею, що сама підбирає кількість колонок (auto-fit, minmax).</p>
-<div class="cols">
-<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+" title="Завдання 2"></iframe>
+<hr>
+<h2 id="task-3">Завдання 3. Адаптивна галерея</h2>
+<p>Зробіть галерею, що сама підбирає кількість колонок (auto-fit, minmax).</p>
+<h3>Код</h3>
+<pre>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -109,8 +108,9 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;gal&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre></div>
-<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+</pre>
+<h3>Результат</h3>
+<iframe width="100%" height="260" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;uk&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;UTF-8&quot;&gt;
@@ -125,10 +125,8 @@ body{font-family:Arial,sans-serif;padding:12px}
 &lt;div class=&quot;gal&quot;&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-" title="Результат завдання 3"></iframe></div>
-</div>
-</section>
-<nav class="top"><a href="work-06.html">← Робота 6</a><a href="../index.html">☰ Усі роботи</a><a href="work-08.html">Робота 8 →</a></nav>
-</div>
+" title="Завдання 3"></iframe>
+<hr>
+<p><a href="../index.html">Головна</a> | <a href="work-06.html">Попередня</a> | <a href="work-08.html">Наступна</a></p>
 </body>
 </html>
