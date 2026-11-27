@@ -36,7 +36,7 @@ document.getElementById("run1").onclick = () => {
   const findProductByName = name =>
     products.find(p => p.name.toLowerCase() === name.toLowerCase()) || 'Товар не знайдено';
   out('В наявності:');
-  getAvailableProducts().forEach(p => out(`${p.name} — ${p.price} грн, ${p.inStock} шт.`));
+  getAvailableProducts().forEach(p => out(`${p.name} - ${p.price} грн, ${p.inStock} шт.`));
   const found = findProductByName(prompt('Назва товару:') || '');
   out(typeof found === 'string' ? found : `Знайдено: ${found.name}, ${found.category}, ${found.price} грн, ${found.inStock} шт.`);
 };
@@ -64,7 +64,7 @@ const res = document.getElementById("res2");
   const groups = groupBy(students);
   for (const g in groups) out(`${g}: ${groups[g].map(s => s.name).join(', ')}`);
   out('За оцінками (спадання):');
-  sortStudentsByGrade(students).forEach(s => out(`${s.name} — ${s.grade}`));
+  sortStudentsByGrade(students).forEach(s => out(`${s.name} - ${s.grade}`));
 }
 </script>
 <h2 id="task-3">Завдання 3: Статистика по працівниках</h2>

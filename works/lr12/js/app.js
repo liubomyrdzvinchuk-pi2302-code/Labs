@@ -1,7 +1,7 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
-// Замініть значення власними (Project Settings -> API Keys).
-// Використовується ТІЛЬКИ publishable key (sb_publishable_...), secret key вставляти заборонено.
+// Вставити свої значення (Project Settings -> API Keys).
+// Тут тільки publishable key (sb_publishable_...), secret key вставляти не можна.
 const supabaseUrl = 'SUPABASE_PROJECT_URL';
 const supabaseKey = 'SUPABASE_PUBLISHABLE_KEY';
 
@@ -37,7 +37,7 @@ async function loadGames() {
 
   for (const game of data) {
     const item = document.createElement('li');
-    item.textContent = `${game.title} – ${game.genre}, гравців: ${game.players}`;
+    item.textContent = `${game.title} - ${game.genre}, гравців: ${game.players}`;
     list.append(item);
   }
 

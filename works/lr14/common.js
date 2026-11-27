@@ -1,4 +1,4 @@
-// ---------- мови ----------
+// мови
 const LANGS = { uk: 'Українська', en: 'English' };
 const LANG_KEY = 'lr14-lang';
 const CART_KEY = 'lr14-cart';

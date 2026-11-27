@@ -92,7 +92,7 @@ function clearWatch() {
   }
 }
 
-// ----- Карта (Leaflet) -----
+// Карта (Leaflet)
 function initMap() {
   if (typeof L === 'undefined') {
     document.getElementById('map').innerHTML = 'Карта не завантажилась (потрібен Інтернет).';
@@ -116,7 +116,7 @@ function addPositionMarker(position) {
   map.setView([lat, lon], 15);
 }
 
-// ----- Пункт призначення -----
+// Пункт призначення
 function showDestination(event) {
   event.preventDefault();
   const lat = parseFloat(document.getElementById('destLat').value.replace(',', '.'));

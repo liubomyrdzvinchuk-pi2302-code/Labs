@@ -63,7 +63,7 @@ const res = document.getElementById("res4");
   function checkParity(num) {
     const p = document.createElement('p');
     const even = num % 2 === 0;
-    p.textContent = `Число ${num} — ${even ? 'парне' : 'непарне'}`;
+    p.textContent = `Число ${num} - ${even ? 'парне' : 'непарне'}`;
     p.style.color = even ? 'green' : 'red';
     res.appendChild(p);
   }

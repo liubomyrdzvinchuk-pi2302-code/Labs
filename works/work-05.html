@@ -59,7 +59,7 @@ const res = document.getElementById("res2");
   const displayLibrary = lib => lib.forEach(b => b.bookInfo());
   const library = makeLibrary();
   displayLibrary(library);
-  out('— додаємо книгу —');
+  out('додаємо книгу');
   library.push(makeBook('Dune', 'Frank Herbert', 1965, false));
   displayLibrary(library);
 }
@@ -125,7 +125,7 @@ document.getElementById("run4").onclick = () => {
   const title = prompt('Назва книги:');
   const author = prompt('Автор:');
   const year = Number(prompt('Рік видання:'));
-  const isRead = confirm('Книга прочитана? (Ок — так, Відміна — ні)');
+  const isRead = confirm('Книга прочитана? (Ок - так, Відміна - ні)');
   library.push(makeBook(title, author, year, isRead));
   displayLibrary(library);
 };

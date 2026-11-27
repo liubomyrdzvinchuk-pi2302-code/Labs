@@ -50,7 +50,7 @@ document.getElementById("run2").onclick = () => {
   const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
   function getStudentInfo() {
     const name = prompt('Ім’я студента:');
-    const score = Number(prompt('Бал (0–12):'));
+    const score = Number(prompt('Бал (0-12):'));
     return { name, score };
   }
   function checkGrade(score) {

@@ -1,6 +1,3 @@
-// ==============================
-// DOM
-// ==============================
 const tabsContainer = document.querySelector('#tabs');
 const tabs = document.querySelectorAll('.tab');
 const tabContents = document.querySelectorAll('.tab-content');
@@ -36,9 +33,6 @@ const scrollTopButton = document.querySelector('#scroll-top');
 
 let radius = '0px 0px 0px 0px';
 
-// ==============================
-// TABS
-// ==============================
 function hideTabs() {
   tabs.forEach(function (tab) {
     tab.classList.remove('active');
@@ -70,9 +64,6 @@ tabs.forEach(function (tab) {
   });
 });
 
-// ==============================
-// CSS CODE
-// ==============================
 function updateCSS() {
   cssCode.value =
     `border-radius: ${radius};\n` +
@@ -80,9 +71,6 @@ function updateCSS() {
     `cursor: ${cursor.value};`;
 }
 
-// ==============================
-// BORDER RADIUS
-// ==============================
 function generateBorderRadius() {
   const topLeftRadius = topLeft.value;
   const topRightRadius = topRight.value;
@@ -106,9 +94,6 @@ topRight.addEventListener('input', generateBorderRadius);
 bottomRight.addEventListener('input', generateBorderRadius);
 bottomLeft.addEventListener('input', generateBorderRadius);
 
-// ==============================
-// OPACITY ТА CURSOR (варіант 4)
-// ==============================
 opacity.addEventListener('input', function () {
   preview.style.opacity = opacity.value;
   opacityValue.textContent = opacity.value;
@@ -120,9 +105,6 @@ cursor.addEventListener('change', function () {
   updateCSS();
 });
 
-// ==============================
-// COPY
-// ==============================
 function copyCSS() {
   navigator.clipboard.writeText(cssCode.value).then(function () {
     copyMessage.textContent = 'CSS-код скопійовано';
@@ -135,9 +117,6 @@ function copyCSS() {
 
 copyButton.addEventListener('click', copyCSS);
 
-// ==============================
-// FORM
-// ==============================
 function validatePresetName() {
   if (presetName.value.trim() === '') {
     presetName.classList.add('error');
@@ -172,9 +151,6 @@ function handlePresetSubmit(event) {
 
 presetForm.addEventListener('submit', handlePresetSubmit);
 
-// ==============================
-// KEYBOARD
-// ==============================
 function handleKeyDown(event) {
   if (event.key === 'Escape') {
     topLeft.value = 0;
@@ -188,7 +164,4 @@ function handleKeyDown(event) {
 
 document.addEventListener('keydown', handleKeyDown);
 
-// ==============================
-// START
-// ==============================
 generateBorderRadius();

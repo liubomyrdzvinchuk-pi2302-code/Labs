@@ -70,7 +70,7 @@ productsBox.addEventListener('click', function (event) {
   ], true);
 });
 
-// Клік по корзині: порожня — модальне вікно, інакше перехід
+// Клік по корзині: порожня - модальне вікно, інакше перехід
 cartLink.addEventListener('click', function (event) {
   if (getCart().length === 0) {
     event.preventDefault();

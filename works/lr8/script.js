@@ -6,7 +6,7 @@ const sortSelect = document.querySelector('#sort');
 
 let tasks = loadTasks();
 
-// ---------- збереження в браузері ----------
+// збереження в браузері
 function loadTasks() {
   try {
     const data = JSON.parse(localStorage.getItem(STORAGE_KEY));
@@ -24,14 +24,14 @@ function saveTasks() {
   } catch (e) {}
 }
 
-// ---------- дата у форматі 12.12.22, 16:09 ----------
+// дата у форматі 12.12.22, 16:09
 function formatDate(timestamp) {
   const d = new Date(timestamp);
   const two = n => String(n).padStart(2, '0');
   return `${two(d.getDate())}.${two(d.getMonth() + 1)}.${two(d.getFullYear() % 100)}, ${two(d.getHours())}:${two(d.getMinutes())}`;
 }
 
-// ---------- відображення ----------
+// відображення
 function sortedTasks() {
   const copy = [...tasks];
   const byNew = (a, b) => b.created - a.created;
@@ -76,7 +76,7 @@ function render() {
   });
 }
 
-// ---------- додавання ----------
+// додавання
 input.addEventListener('keydown', function (event) {
   if (event.key !== 'Enter') return;
 
@@ -89,7 +89,7 @@ input.addEventListener('keydown', function (event) {
   render();
 });
 
-// ---------- виконання та видалення (делегування) ----------
+// виконання та видалення (делегування)
 list.addEventListener('click', function (event) {
   const li = event.target.closest('li');
   if (!li) return;
@@ -108,7 +108,7 @@ list.addEventListener('click', function (event) {
   }
 });
 
-// ---------- редагування (подвійний клік) ----------
+// редагування (подвійний клік)
 list.addEventListener('dblclick', function (event) {
   if (!event.target.classList.contains('text')) return;
 
@@ -139,7 +139,7 @@ list.addEventListener('dblclick', function (event) {
   });
 });
 
-// ---------- сортування ----------
+// сортування
 sortSelect.addEventListener('change', function () {
   saveTasks();
   render();

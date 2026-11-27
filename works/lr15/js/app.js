@@ -1,7 +1,7 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
-// Замініть значення власними (Project Settings -> API Keys).
-// Тільки Publishable key (sb_publishable_...). Secret key вставляти заборонено.
+// Вставити свої значення (Project Settings -> API Keys).
+// Тут тільки publishable key (sb_publishable_...), secret key вставляти не можна.
 const SUPABASE_URL = 'SUPABASE_PROJECT_URL';
 const SUPABASE_KEY = 'SUPABASE_PUBLISHABLE_KEY';
 
@@ -58,7 +58,7 @@ function showGames() {
   for (const game of games) {
     const item = document.createElement('li');
     const description = document.createElement('span');
-    description.textContent = `${game.title} – ${game.genre}, гравців: ${game.players}`;
+    description.textContent = `${game.title} - ${game.genre}, гравців: ${game.players}`;
     item.append(description);
 
     if (isAdmin) {
@@ -141,7 +141,7 @@ async function updateAuthState() {
   }
 }
 
-// ---------- реєстрація ----------
+// реєстрація
 $('#register-form').addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
@@ -170,7 +170,7 @@ $('#register-form').addEventListener('submit', async (event) => {
   }
 });
 
-// ---------- вхід та вихід ----------
+// вхід та вихід
 $('#login-form').addEventListener('submit', async (event) => {
   event.preventDefault();
   const form = event.currentTarget;
@@ -205,7 +205,7 @@ $('#logout-button').addEventListener('click', async () => {
   }
 });
 
-// ---------- редагування ----------
+// редагування
 function startEditing(game) {
   if (!isAdmin) return;
   gameIdInput.value = String(game.id);
@@ -222,7 +222,7 @@ cancelButton.addEventListener('click', () => {
   formStatus.textContent = '';
 });
 
-// ---------- додавання та збереження змін ----------
+// додавання та збереження змін
 gameForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   if (!isAdmin) return;
@@ -262,7 +262,7 @@ gameForm.addEventListener('submit', async (event) => {
   }
 });
 
-// ---------- видалення з підтвердженням ----------
+// видалення з підтвердженням
 async function deleteGame(gameId) {
   if (!isAdmin || !confirm('Видалити вибрану гру?')) return;
 
