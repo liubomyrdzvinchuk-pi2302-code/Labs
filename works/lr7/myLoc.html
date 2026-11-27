@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Wherever you go, there you are</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+  <p><a href="../../index.html">Головна</a></p>
+
+  <form>
+    <input type="button" id="watch" value="Watch me">
+    <input type="button" id="clearWatch" value="Clear watch">
+  </form>
+
+  <div id="location">
+    Your location will go here.
+  </div>
+  <div id="distance">
+    Distance from College will go here.
+  </div>
+
+  <h3>Пункт призначення</h3>
+  <form id="destinationForm">
+    <input type="text" id="destLat" placeholder="Широта, напр. 50.4501">
+    <input type="text" id="destLon" placeholder="Довгота, напр. 30.5234">
+    <input type="submit" value="Показати на карті">
+  </form>
+  <div id="destination"></div>
+
+  <div id="map" style="height: 400px;"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="myLoc.js"></script>
+</body>
+</html>
