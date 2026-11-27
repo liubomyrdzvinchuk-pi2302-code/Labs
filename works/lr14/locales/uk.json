@@ -22,5 +22,6 @@
   "total": "Разом до оплати:",
   "pay": "Оплатити",
   "thanks": "Дякуємо за замовлення!",
-  "gameFormat": "Гра «{name}»"
+  "gameFormat": "Гра «{name}»",
+  "cartWord": "Корзина"
 }

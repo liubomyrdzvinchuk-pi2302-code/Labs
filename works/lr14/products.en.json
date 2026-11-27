@@ -7,7 +7,7 @@
       "category": "Strategy",
       "price": 650,
       "description": "Build cities and roads from tiles, a classic for two to five players",
-      "image": "images/1.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carcassonne_Miples.jpg?width=400"
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "category": "Economic",
       "price": 899,
       "description": "Buy streets, build hotels and bankrupt your opponents",
-      "image": "images/2.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monopoly_board_on_white_bg.jpg?width=400"
     },
     {
       "id": 3,
@@ -23,7 +23,7 @@
       "category": "Card games",
       "price": 180,
       "description": "A fast card game: be the first to get rid of all your cards",
-      "image": "images/3.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Uno.jpg?width=400"
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "category": "Action",
       "price": 420,
       "description": "Pull blocks from the tower and do not let it fall",
-      "image": "images/4.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jenga.JPG?width=400"
     },
     {
       "id": 5,
@@ -39,7 +39,7 @@
       "category": "Logic",
       "price": 350,
       "description": "The classic game for two players on an 8×8 board",
-      "image": "images/5.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chess_game_Staunton_No._6_perfil_view_8.jpg?width=400"
     },
     {
       "id": 6,
@@ -47,7 +47,7 @@
       "category": "Quick thinking",
       "price": 290,
       "description": "Find the matching picture on two cards faster than the others",
-      "image": "images/6.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dobble_jeu.jpg?width=400"
     },
     {
       "id": 7,
@@ -55,7 +55,7 @@
       "category": "Card games",
       "price": 560,
       "description": "A humorous card game about dungeons and treasure",
-      "image": "images/7.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Munchkin_game.JPG?width=400"
     },
     {
       "id": 8,
@@ -63,7 +63,7 @@
       "category": "Word games",
       "price": 480,
       "description": "Make words from letters and score points",
-      "image": "images/8.svg"
+      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scrabble_board_with_Tagalog_words.jpg?width=400"
     }
   ]
 }

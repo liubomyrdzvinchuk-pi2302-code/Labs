@@ -14,9 +14,14 @@ function renderProducts() {
 
     const img = document.createElement('img');
     img.src = p.image;
+    img.onerror = function () {
+      img.onerror = null;
+      img.src = 'images/' + p.id + '.svg';
+    };
     img.alt = p.name;
     img.width = 200;
     img.height = 140;
+    img.style.objectFit = 'cover';
 
     const name = document.createElement('h3');
     name.textContent = p.name;

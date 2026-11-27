@@ -19,9 +19,12 @@ function renderProducts() {
       card.appendChild(badge);
     }
 
-    const icon = document.createElement('div');
-    icon.className = 'icon';
-    icon.textContent = p.icon;
+    const icon = document.createElement('img');
+    icon.src = p.image;
+    icon.alt = p.name;
+    icon.width = 170;
+    icon.height = 120;
+    icon.style.objectFit = 'cover';
 
     const name = document.createElement('h3');
     name.textContent = p.name;

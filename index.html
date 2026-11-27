@@ -7,31 +7,32 @@
 </head>
 <body>
 <style>
-body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; padding: 20px; }
-h1 { text-align: center; }
-.list { max-width: 500px; margin: 0 auto; }
-.list p { margin: 8px 0; }
-button { width: 100%; padding: 10px; font-size: 16px; border: 1px solid #888; background: #fff; cursor: pointer; }
-button:hover { background: #dbe8ff; }
+body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; padding: 24px 16px; color: #222; background: #fff; }
+h1 { text-align: center; font-size: 26px; font-weight: 600; margin: 10px 0 24px; }
+.list { max-width: 640px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.list p { margin: 0; }
+button { width: 100%; height: 100%; padding: 12px 10px; font-size: 15px; text-align: left; border: 1px solid #b5b5b5; border-radius: 3px; background: #f6f6f6; cursor: pointer; }
+button:hover { background: #e6e6e6; }
+@media (max-width: 480px) { .list { grid-template-columns: 1fr; } }
 </style>
 <h1>Лабораторні роботи з веб-технологій</h1>
 <div class="list">
-<p><button onclick="location.href='works/work-01.html'">ЛР №1</button></p>
-<p><button onclick="location.href='works/work-02.html'">ЛР №2</button></p>
-<p><button onclick="location.href='works/work-03.html'">ЛР №3</button></p>
-<p><button onclick="location.href='works/work-04.html'">ПР №1</button></p>
-<p><button onclick="location.href='works/work-05.html'">ЛР №4</button></p>
-<p><button onclick="location.href='works/work-06.html'">ЛР №5</button></p>
-<p><button onclick="location.href='works/lr6/index.html'">ЛР №6</button></p>
-<p><button onclick="location.href='works/lr7/myLoc.html'">ЛР №7</button></p>
-<p><button onclick="location.href='works/lr8/index.html'">ЛР №8</button></p>
-<p><button onclick="location.href='works/work-10.html'">ЛР №9</button></p>
-<p><button onclick="location.href='works/lr10/index.html'">ЛР №10</button></p>
-<p><button onclick="location.href='works/lr11/heroes.html'">ЛР №11</button></p>
-<p><button onclick="location.href='works/lr12/index.html'">ЛР №12</button></p>
-<p><button onclick="location.href='works/lr13/index.html'">ЛР №13</button></p>
-<p><button onclick="location.href='works/lr14/index.html'">ЛР №14</button></p>
-<p><button onclick="location.href='works/lr15/index.html'">ЛР №15</button></p>
+<p><button onclick="location.href='works/work-01.html'"><b>ЛР №1</b><br>Основи JavaScript</button></p>
+<p><button onclick="location.href='works/work-02.html'"><b>ЛР №2</b><br>Змінні і типи даних</button></p>
+<p><button onclick="location.href='works/work-03.html'"><b>ЛР №3</b><br>Функції</button></p>
+<p><button onclick="location.href='works/work-04.html'"><b>ПР №1</b><br>Масиви об’єктів</button></p>
+<p><button onclick="location.href='works/work-05.html'"><b>ЛР №4</b><br>Об’єкти та масиви</button></p>
+<p><button onclick="location.href='works/work-06.html'"><b>ЛР №5</b><br>DOM та події</button></p>
+<p><button onclick="location.href='works/lr6/index.html'"><b>ЛР №6</b><br>CSS-генератор</button></p>
+<p><button onclick="location.href='works/lr7/myLoc.html'"><b>ЛР №7</b><br>Geolocation</button></p>
+<p><button onclick="location.href='works/lr8/index.html'"><b>ЛР №8</b><br>ToDo List</button></p>
+<p><button onclick="location.href='works/work-10.html'"><b>ЛР №9</b><br>Promise</button></p>
+<p><button onclick="location.href='works/lr10/index.html'"><b>ЛР №10</b><br>Корзина товарів</button></p>
+<p><button onclick="location.href='works/lr11/heroes.html'"><b>ЛР №11</b><br>JSON</button></p>
+<p><button onclick="location.href='works/lr12/index.html'"><b>ЛР №12</b><br>Supabase</button></p>
+<p><button onclick="location.href='works/lr13/index.html'"><b>ЛР №13</b><br>Каталог із JSON</button></p>
+<p><button onclick="location.href='works/lr14/index.html'"><b>ЛР №14</b><br>Мови сайту</button></p>
+<p><button onclick="location.href='works/lr15/index.html'"><b>ЛР №15</b><br>Supabase: вхід і ролі</button></p>
 </div>
 </body>
 </html>

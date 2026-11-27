@@ -22,5 +22,6 @@
   "total": "Total to pay:",
   "pay": "Pay",
   "thanks": "Thank you for your order!",
-  "gameFormat": "Game “{name}”"
+  "gameFormat": "Game “{name}”",
+  "cartWord": "Cart"
 }
