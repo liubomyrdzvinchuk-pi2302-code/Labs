@@ -3,62 +3,197 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 6</title>
+<title>ЛР №5</title>
 </head>
 <body>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-05.html'">Попередня</button> <button onclick="location.href='work-07.html'">Наступна</button> </p>
-<h1>Робота 6. CSS: Flexbox</h1>
-<h2 id="task-1">Завдання 1. Горизонтальне меню</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.menu{display:flex;justify-content:space-between;background:#222;padding:10px 20px}
-.menu a{color:#fff;text-decoration:none}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;nav class=&quot;menu&quot;&gt;&lt;a href=&quot;#&quot;&gt;Головна&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Про нас&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Контакти&lt;/a&gt;&lt;/nav&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 1"></iframe>
-<h2 id="task-2">Завдання 2. Центрування</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.wrap{display:flex;justify-content:center;align-items:center;height:160px;background:#eef}
-.c{background:#2a5bd7;color:#fff;padding:20px}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&quot;wrap&quot;&gt;&lt;div class=&quot;c&quot;&gt;Центр&lt;/div&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 2"></iframe>
-<h2 id="task-3">Завдання 3. Картки з переносом</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.row{display:flex;flex-wrap:wrap;gap:10px}
-.row div{flex:1 1 120px;background:#cfe3ff;padding:20px;text-align:center}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&quot;row&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 3"></iframe>
+<h2 id="task-1">Завдання 1: Температура: Фаренгейт і Цельсій</h2>
+<div id="res1"></div>
+<script type="module">
+{
+const res = document.getElementById("res1");
+  res.innerHTML = '<p>Фаренгейт: <input type="number" class="f"></p><p>Цельсій: <input type="number" class="c"></p>';
+  const f = res.querySelector('.f');
+  const c = res.querySelector('.c');
+  function toCelsius() {
+    c.value = f.value === '' ? '' : ((5 / 9) * (f.value - 32)).toFixed(2);
+  }
+  function toFahrenheit() {
+    f.value = c.value === '' ? '' : ((9 / 5) * c.value + 32).toFixed(2);
+  }
+  f.addEventListener('input', toCelsius);
+  c.addEventListener('input', toFahrenheit);
+}
+</script>
+<h2 id="task-2">Завдання 2: Таблиця множення</h2>
+<div id="res2"></div>
+<script type="module">
+{
+const res = document.getElementById("res2");
+  res.innerHTML = '<p>Рахунок: <span class="score">0 з 0</span></p><p><button class="next">Наступне завдання</button></p><p class="task"></p><p><input type="number" class="ans"> <button class="check">Перевірити</button></p><p class="result"></p>';
+  const q = s => res.querySelector(s);
+  let score = 0, total = 0, a = 0, b = 0, checked = false;
+  const rnd = () => Math.floor(Math.random() * 9) + 2;
+  function nextTask() {
+    a = rnd(); b = rnd(); checked = false;
+    q('.task').textContent = `${a} × ${b} = ?`;
+    q('.ans').value = '';
+    q('.result').textContent = '';
+  }
+  function checkAnswer() {
+    if (checked) return;
+    if (q('.ans').value === '') { q('.result').textContent = 'Введіть відповідь'; return; }
+    checked = true; total++;
+    if (Number(q('.ans').value) === a * b) { score++; q('.result').textContent = 'Правильно!'; }
+    else q('.result').textContent = `Неправильно. Правильна відповідь: ${a * b}`;
+    q('.score').textContent = `${score} з ${total}`;
+  }
+  q('.next').addEventListener('click', nextTask);
+  q('.check').addEventListener('click', checkAnswer);
+  nextTask();
+}
+</script>
+<h2 id="task-3">Завдання 3: Таблиця множення з радіокнопками</h2>
+<div id="res3"></div>
+<script type="module">
+{
+const res = document.getElementById("res3");
+  res.innerHTML = '<p>Рахунок: <span class="score">0 з 0</span></p><p><button class="next">Наступне завдання</button></p><p class="task"></p><div class="opts"></div><p class="result"></p>';
+  const q = s => res.querySelector(s);
+  let score = 0, total = 0, a = 0, b = 0;
+  const rnd = () => Math.floor(Math.random() * 9) + 2;
+  function makeOptions(correct) {
+    const set = new Set([correct]);
+    while (set.size < 4) set.add(rnd() * rnd());
+    return [...set].sort(() => Math.random() - 0.5);
+  }
+  function onAnswer(value) {
+    total++;
+    if (value === a * b) { score++; q('.result').textContent = 'Правильно!'; }
+    else q('.result').textContent = `Неправильно. Правильна відповідь: ${a * b}`;
+    q('.score').textContent = `${score} з ${total}`;
+    q('.opts').querySelectorAll('input').forEach(r => r.disabled = true);
+  }
+  function nextTask() {
+    a = rnd(); b = rnd();
+    q('.task').textContent = `${a} × ${b} = ?`;
+    q('.result').textContent = '';
+    const box = q('.opts');
+    box.innerHTML = '';
+    makeOptions(a * b).forEach(v => {
+      const label = document.createElement('label');
+      const radio = document.createElement('input');
+      radio.type = 'radio';
+      radio.name = 'answer';
+      radio.addEventListener('change', () => onAnswer(v));
+      label.appendChild(radio);
+      label.append(' ' + v + ' ');
+      box.appendChild(label);
+    });
+  }
+  q('.next').addEventListener('click', nextTask);
+  nextTask();
+}
+</script>
+<h2 id="task-4">Завдання 4: Перегортання зображень</h2>
+<div id="res4"></div>
+<script type="module">
+{
+const res = document.getElementById("res4");
+  const imagesArray = [
+    { path: 'images/001.svg', title: 'Зображення 1', description: 'Перше зображення' },
+    { path: 'images/002.svg', title: 'Зображення 2', description: 'Друге зображення' },
+    { path: 'images/003.svg', title: 'Зображення 3', description: 'Третє зображення' }
+  ];
+  function initPhotoRotator(id, images) {
+    const box = document.getElementById(id);
+    let index = 0;
+    const make = tag => document.createElement(tag);
+    const counter = make('p');
+    const img = make('img');
+    const title = make('p');
+    const desc = make('p');
+    const nav = make('p');
+    const back = make('a');
+    const next = make('a');
+    img.width = 300;
+    img.height = 200;
+    back.href = '#'; back.textContent = 'Назад';
+    next.href = '#'; next.textContent = 'Вперед';
+    nav.append(back, ' ', next);
+    box.append(counter, img, title, desc, nav);
+    function show() {
+      const item = images[index];
+      counter.textContent = `${index + 1} / ${images.length}`;
+      img.src = item.path;
+      img.alt = item.title;
+      title.textContent = item.title;
+      desc.textContent = item.description;
+      back.style.visibility = index === 0 ? 'hidden' : 'visible';
+      next.style.visibility = index === images.length - 1 ? 'hidden' : 'visible';
+    }
+    back.addEventListener('click', e => { e.preventDefault(); if (index > 0) { index--; show(); } });
+    next.addEventListener('click', e => { e.preventDefault(); if (index < images.length - 1) { index++; show(); } });
+    show();
+  }
+  const rotator = document.createElement('div');
+  rotator.id = 'rotator';
+  res.appendChild(rotator);
+  initPhotoRotator('rotator', imagesArray);
+}
+</script>
+<h2 id="task-5">Завдання 5: Captcha</h2>
+<div id="res5"></div>
+<script type="module">
+{
+const res = document.getElementById("res5");
+  const font = {
+    0: '111101101101111', 1: '010110010010111', 2: '111001111100111', 3: '111001111001111', 4: '101101111001001',
+    5: '111100111001111', 6: '111100111101111', 7: '111001001001001', 8: '111101111101111', 9: '111101111001111'
+  };
+  function initCaptcha(count) {
+    const box = document.createElement('div');
+    const picture = document.createElement('div');
+    const input = document.createElement('input');
+    const button = document.createElement('button');
+    const result = document.createElement('p');
+    let code = '';
+    button.textContent = 'Перевірити';
+    picture.style.display = 'flex';
+    picture.style.gap = '10px';
+    function generate() {
+      code = '';
+      picture.innerHTML = '';
+      for (let i = 0; i < count; i++) {
+        const digit = String(Math.floor(Math.random() * 10));
+        code += digit;
+        const cell = document.createElement('div');
+        cell.style.display = 'grid';
+        cell.style.gridTemplateColumns = 'repeat(3, 8px)';
+        cell.style.gap = '1px';
+        for (const bit of font[digit]) {
+          const px = document.createElement('span');
+          px.style.width = '8px';
+          px.style.height = '8px';
+          px.style.background = bit === '1' ? '#000' : '#eee';
+          cell.appendChild(px);
+        }
+        picture.appendChild(cell);
+      }
+    }
+    function check() {
+      if (input.value === code) result.textContent = 'Captcha введено правильно';
+      else { result.textContent = 'Неправильно, спробуйте ще'; generate(); }
+      input.value = '';
+    }
+    button.addEventListener('click', check);
+    box.append(picture, document.createElement('br'), input, ' ', button, result);
+    res.appendChild(box);
+    generate();
+  }
+  initCaptcha(5);
+}
+</script>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-05.html'">Попередня</button> <button onclick="location.href='work-07.html'">Наступна</button> </p>
 </body>
 </html>
