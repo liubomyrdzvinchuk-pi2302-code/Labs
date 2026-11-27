@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+#cart-link {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  text-decoration: none;
+}
+
+#cart-count {
+  font-size: 14px;
+  background: red;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1px 7px;
+  vertical-align: top;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card .category {
+  color: #777;
+  font-size: 13px;
+}
+
+.card .price {
+  font-weight: bold;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.qty {
+  width: 60px;
+}
+
+dialog {
+  border: 1px solid #333;
+  padding: 20px;
+}

@@ -2,85 +2,10 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 14</title>
-<style>
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 0 15px; background: #fafafa; }
-h1 { text-align: center; }
-h2 { border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 30px; }
-button { padding: 6px 12px; border: 1px solid #888; background: #fff; cursor: pointer; }
-button:hover { background: #dbe8ff; }
-input { padding: 4px; }
-table { border-collapse: collapse; }
-th, td { border: 1px solid #999; padding: 4px 8px; }
-</style>
+<title>ЛР №13</title>
+<meta http-equiv="refresh" content="0; url=lr13/index.html">
 </head>
 <body>
-<p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-13.html'">Попередня</button> <button onclick="location.href='work-15.html'">Наступна</button> </p>
-<h1>Робота 14. JavaScript: асинхронність та сховище</h1>
-<h2 id="task-1">Завдання 1. Таймер</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h2 id=&quot;t&quot;&gt;0&lt;/h2&gt;&lt;button id=&quot;s&quot;&gt;Старт&lt;/button&gt; &lt;button id=&quot;x&quot;&gt;Стоп&lt;/button&gt;
-&lt;script&gt;
-let sec=0,id=null;
-s.onclick=()=&gt;{ if(!id) id=setInterval(()=&gt;t.textContent=++sec,1000); };
-x.onclick=()=&gt;{ clearInterval(id); id=null; };
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 1"></iframe>
-<h2 id="task-2">Завдання 2. async/await</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p id=&quot;o&quot;&gt;Завантаження...&lt;/p&gt;
-&lt;script&gt;
-const load=()=&gt;new Promise(res=&gt;setTimeout(()=&gt;res({user:&#x27;Оля&#x27;,posts:3}),1000));
-(async()=&gt;{
-  const d=await load();
-  document.getElementById(&#x27;o&#x27;).textContent=`Користувач ${d.user}, постів: ${d.posts}`;
-})();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 2"></iframe>
-<h2 id="task-3">Завдання 3. localStorage</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;input id=&quot;n&quot; placeholder=&quot;Ваше ім’я&quot;&gt; &lt;button id=&quot;s&quot;&gt;Зберегти&lt;/button&gt;&lt;p id=&quot;o&quot;&gt;&lt;/p&gt;
-&lt;script&gt;
-const get=()=&gt;{try{return localStorage.getItem(&#x27;name&#x27;)}catch(e){return null}};
-const show=()=&gt;o.textContent=get()?&#x27;Вітаю, &#x27;+get()+&#x27;!&#x27;:&#x27;Невідомий користувач&#x27;;
-s.onclick=()=&gt;{try{localStorage.setItem(&#x27;name&#x27;,n.value)}catch(e){}; show();};
-show();
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 3"></iframe>
-<p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-13.html'">Попередня</button> <button onclick="location.href='work-15.html'">Наступна</button> </p>
+<p><a href="lr13/index.html">ЛР №13</a></p>
 </body>
 </html>
