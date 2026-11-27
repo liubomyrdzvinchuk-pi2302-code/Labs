@@ -2,78 +2,10 @@
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 13</title>
+<title>ЛР №12</title>
+<meta http-equiv="refresh" content="0; url=lr12/index.html">
 </head>
 <body>
-<p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-12.html'">Попередня</button> <button onclick="location.href='work-14.html'">Наступна</button> </p>
-<h1>Робота 13. JavaScript: події та валідація</h1>
-<h2 id="task-1">Завдання 1. Лічильник</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;m&quot;&gt;−&lt;/button&gt; &lt;b id=&quot;v&quot;&gt;0&lt;/b&gt; &lt;button id=&quot;p&quot;&gt;+&lt;/button&gt; &lt;button id=&quot;r&quot;&gt;Скинути&lt;/button&gt;
-&lt;script&gt;
-let n=0;
-const v=document.getElementById(&#x27;v&#x27;);
-const upd=()=&gt;v.textContent=n;
-m.onclick=()=&gt;{n--;upd()};
-p.onclick=()=&gt;{n++;upd()};
-r.onclick=()=&gt;{n=0;upd()};
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 1"></iframe>
-<h2 id="task-2">Завдання 2. Валідація форми</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;form id=&quot;f&quot;&gt;&lt;p&gt;&lt;input id=&quot;e&quot; placeholder=&quot;Email&quot;&gt;&lt;/p&gt;&lt;p&gt;&lt;input id=&quot;p&quot; type=&quot;password&quot; placeholder=&quot;Пароль&quot;&gt;&lt;/p&gt;&lt;button&gt;Увійти&lt;/button&gt;&lt;/form&gt;&lt;p id=&quot;msg&quot;&gt;&lt;/p&gt;
-&lt;script&gt;
-f.addEventListener(&#x27;submit&#x27;,e=&gt;{
-  e.preventDefault();
-  const okE=/^\S+@\S+\.\S+$/.test(document.getElementById(&#x27;e&#x27;).value);
-  const okP=document.getElementById(&#x27;p&#x27;).value.length&gt;=6;
-  msg.textContent=okE&amp;&amp;okP?&#x27;Успіх!&#x27;:&#x27;Помилка: &#x27;+(!okE?&#x27;email &#x27;:&#x27;&#x27;)+(!okP?&#x27;пароль&#x27;:&#x27;&#x27;);
-  msg.style.color=okE&amp;&amp;okP?&#x27;green&#x27;:&#x27;red&#x27;;
-});
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 2"></iframe>
-<h2 id="task-3">Завдання 3. Зміна теми</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body.dark{background:#222;color:#eee}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;button id=&quot;b&quot;&gt;Змінити тему&lt;/button&gt;&lt;p&gt;Привіт, світе!&lt;/p&gt;
-&lt;script&gt;
-b.onclick=()=&gt;document.body.classList.toggle(&#x27;dark&#x27;);
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 3"></iframe>
-<p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-12.html'">Попередня</button> <button onclick="location.href='work-14.html'">Наступна</button> </p>
+<p><a href="lr12/index.html">ЛР №12</a></p>
 </body>
 </html>
