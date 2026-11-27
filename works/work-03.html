@@ -3,73 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 3</title>
+<title>ЛР №3</title>
 </head>
 <body>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-02.html'">Попередня</button> <button onclick="location.href='work-04.html'">Наступна</button> </p>
-<h1>Робота 3. HTML: форми</h1>
-<h2 id="task-1">Завдання 1. Форма реєстрації</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;form onsubmit=&quot;event.preventDefault();alert(&#x27;Відправлено&#x27;)&quot;&gt;
-  &lt;p&gt;&lt;label&gt;Ім’я: &lt;input type=&quot;text&quot; name=&quot;name&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
-  &lt;p&gt;&lt;label&gt;Пароль: &lt;input type=&quot;password&quot; minlength=&quot;6&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
-  &lt;button type=&quot;submit&quot;&gt;Зареєструватись&lt;/button&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 1"></iframe>
-<h2 id="task-2">Завдання 2. Вибір значень</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;form&gt;
-&lt;p&gt;Стать:
- &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;g&quot; checked&gt; Ч&lt;/label&gt;
- &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;g&quot;&gt; Ж&lt;/label&gt;&lt;/p&gt;
-&lt;p&gt;Інтереси:
- &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Web&lt;/label&gt;
- &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Дизайн&lt;/label&gt;&lt;/p&gt;
-&lt;p&gt;&lt;select&gt;&lt;option&gt;Київ&lt;/option&gt;&lt;option&gt;Львів&lt;/option&gt;&lt;option&gt;Одеса&lt;/option&gt;&lt;/select&gt;&lt;/p&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 2"></iframe>
-<h2 id="task-3">Завдання 3. Різні типи input</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;form&gt;
-&lt;p&gt;&lt;input type=&quot;date&quot;&gt; &lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot; value=&quot;5&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt; &lt;input type=&quot;color&quot; value=&quot;#ff8800&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;textarea rows=&quot;3&quot; cols=&quot;30&quot; placeholder=&quot;Коментар&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
-&lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 3"></iframe>
+<h2 id="task-1">Завдання 1: Повне ім’я та привітання</h2>
+<div id="res1"></div>
+<button id="run1">Ввести дані</button>
+<script type="module">
+{
+const res = document.getElementById("res1");
+document.getElementById("run1").onclick = () => {
+  res.innerHTML = "";
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  function getFullName(firstName, lastName) {
+    return `${firstName} ${lastName}`;
+  }
+  function showGreeting(fullName, age) {
+    out(`Hello, ${fullName}! You are ${age} years old.`);
+  }
+  const firstName = prompt('Ім’я:');
+  const lastName = prompt('Прізвище:');
+  const age = prompt('Вік:');
+  const fullName = getFullName(firstName, lastName);
+  showGreeting(fullName, age);
+};
+}
+</script>
+<h2 id="task-2">Завдання 2: Оцінка студента</h2>
+<div id="res2"></div>
+<button id="run2">Ввести студента</button>
+<script type="module">
+{
+const res = document.getElementById("res2");
+document.getElementById("run2").onclick = () => {
+  res.innerHTML = "";
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  function getStudentInfo() {
+    const name = prompt('Ім’я студента:');
+    const score = Number(prompt('Бал (0–12):'));
+    return { name, score };
+  }
+  function checkGrade(score) {
+    if (score >= 10) return 'Excellent';
+    if (score >= 7) return 'Good';
+    if (score >= 4) return 'Satisfactory';
+    return 'Fail';
+  }
+  function showResult(name, grade) {
+    out(`Student: ${name}`);
+    out(`Grade: ${grade}`);
+  }
+  const info = getStudentInfo();
+  const grade = checkGrade(info.score);
+  showResult(info.name, grade);
+};
+}
+</script>
+<h2 id="task-3">Завдання 3: Чайові</h2>
+<div id="res3"></div>
+<button id="run3">Ввести суму рахунку</button>
+<script type="module">
+{
+const res = document.getElementById("res3");
+document.getElementById("run3").onclick = () => {
+  res.innerHTML = "";
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  function calculateTip(amount, percent = 10) {
+    return amount * percent / 100;
+  }
+  function showResult(amount, tip) {
+    out(`Bill: ${amount} грн`);
+    out(`Tip (10%): ${tip} грн`);
+    out(`Total: ${amount + tip} грн`);
+  }
+  const amount = Number(prompt('Сума рахунку, грн:', '450'));
+  const tip = calculateTip(amount);
+  showResult(amount, tip);
+};
+}
+</script>
+<h2 id="task-4">Завдання 4: Таймер з колбеком</h2>
+<div id="res4"></div>
+<button id="run4">Запустити таймер</button>
+<script type="module">
+{
+const res = document.getElementById("res4");
+document.getElementById("run4").onclick = () => {
+  res.innerHTML = "";
+  function startGreetingTimer(message, seconds, callback) {
+    setTimeout(() => {
+      res.textContent = message;
+      callback();
+    }, seconds * 1000);
+  }
+  res.textContent = 'Зачекайте 3 секунди...';
+  startGreetingTimer('Hello!', 3, () => alert('Time is up!'));
+};
+}
+</script>
+<h2 id="task-5">Завдання 5: Калькулятор</h2>
+<div id="res5"></div>
+<button id="run5">Ввести числа</button>
+<script type="module">
+{
+const res = document.getElementById("res5");
+document.getElementById("run5").onclick = () => {
+  res.innerHTML = "";
+  function calculate(a, b, operation) {
+    switch (operation) {
+      case '+': return a + b;
+      case '-': return a - b;
+      case '*': return a * b;
+      case '/': return a / b;
+      default: return 'Invalid operation';
+    }
+  }
+  function showResult() {
+    const a = Number(prompt('Перше число:'));
+    const b = Number(prompt('Друге число:'));
+    const op = prompt('Операція (+, -, *, /):');
+    alert(calculate(a, b, op));
+  }
+  showResult();
+};
+}
+</script>
+<h2 id="task-6">Завдання 6: Лічильник (замикання)</h2>
+<div id="res6"></div>
+<button id="run6">Запустити лічильник</button>
+<script type="module">
+{
+const res = document.getElementById("res6");
+document.getElementById("run6").onclick = () => {
+  res.innerHTML = "";
+  function createClickCounter() {
+    let count = 0;
+    return function () {
+      count++;
+      console.log(count);
+      const p = document.createElement('p');
+      p.textContent = count;
+      res.appendChild(p);
+    };
+  }
+  const counter = createClickCounter();
+  counter();
+  counter();
+  counter();
+};
+}
+</script>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-02.html'">Попередня</button> <button onclick="location.href='work-04.html'">Наступна</button> </p>
 </body>
 </html>
