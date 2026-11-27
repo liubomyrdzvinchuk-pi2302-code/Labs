@@ -1,0 +1,78 @@
+body {
+  font-family: Georgia, serif;
+  margin: 20px;
+}
+
+.todo {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+#new-task {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #333;
+  font-size: 14px;
+}
+
+.sort {
+  font-size: 14px;
+}
+
+#list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #333;
+  border-top: 0;
+}
+
+#list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-top: 1px solid #333;
+}
+
+#list li .text {
+  flex: 1;
+  cursor: text;
+}
+
+#list li .date {
+  font-size: 12px;
+  color: #666;
+}
+
+#list li.done .text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+#list li.done .check {
+  visibility: hidden;
+}
+
+#list li .edit {
+  flex: 1;
+  padding: 4px;
+  font-size: 14px;
+}
+
+#list li .remove {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 2px solid red;
+  border-radius: 50%;
+  background: #fff;
+  color: red;
+  font-weight: bold;
+  line-height: 1;
+  cursor: pointer;
+}
