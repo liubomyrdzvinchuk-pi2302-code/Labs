@@ -3,129 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 1</title>
+<title>ЛР №1</title>
 </head>
 <body>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-02.html'">Наступна</button> </p>
-<h1>Лабораторна №1. Основи роботи з JavaScript</h1>
-<h2 id="task-1">Рівень 4-6, завдання 1</h2>
-<p><button id="run1">Виконати</button></p>
+<h2 id="task-1">Завдання 1: Привітання</h2>
 <div id="res1"></div>
+<button id="run1">Показати привітання</button>
 <script type="module">
 {
-  const res = document.getElementById("res1");
-  document.getElementById("run1").onclick = () => {
-    res.innerHTML = "";
-    alert('Натисніть ОК');
-    res.textContent = 'Hello, Дзвінчук Любомир!';
-  };
+const res = document.getElementById("res1");
+document.getElementById("run1").onclick = () => {
+  res.innerHTML = "";
+  alert('Натисніть ОК');
+  res.textContent = 'Hello, Дзвінчук Любомир!';
+};
 }
 </script>
-<h2 id="task-2">Рівень 4-6, завдання 2</h2>
-<p><button id="run2">Виконати</button></p>
+<h2 id="task-2">Завдання 2: Діалог Ок / Відміна</h2>
 <div id="res2"></div>
+<button id="run2">Показати діалог</button>
 <script type="module">
 {
-  const res = document.getElementById("res2");
-  document.getElementById("run2").onclick = () => {
-    res.innerHTML = "";
-    const ok = confirm('Натисніть Ок або Відміна');
-    res.textContent = ok ? 'Натиснуто кнопку «Ок»' : 'Натиснуто кнопку «Відміна»';
-  };
+const res = document.getElementById("res2");
+document.getElementById("run2").onclick = () => {
+  res.innerHTML = "";
+  const ok = confirm('Натисніть Ок або Відміна');
+  res.textContent = ok ? 'Натиснуто кнопку «Ок»' : 'Натиснуто кнопку «Відміна»';
+};
 }
 </script>
-<h2 id="task-3">Рівень 4-6, завдання 3</h2>
-<p><button id="run3">Виконати</button></p>
+<h2 id="task-3">Завдання 3: Таблиця множення для числа 4</h2>
 <div id="res3"></div>
 <script type="module">
 {
-  const res = document.getElementById("res3");
-  document.getElementById("run3").onclick = () => {
-    res.innerHTML = "";
-    const n = 4;
-    for (let i = 1; i <= 10; i++) {
-      const p = document.createElement('p');
-      p.textContent = `${n} × ${i} = ${n * i}`;
-      res.appendChild(p);
-    }
-  };
+const res = document.getElementById("res3");
+  const n = 4;
+  for (let i = 1; i <= 10; i++) {
+    const p = document.createElement('p');
+    p.textContent = `${n} × ${i} = ${n * i}`;
+    res.appendChild(p);
+  }
 }
 </script>
-<h2 id="task-4">Рівень 7-9, завдання 1</h2>
-<p><button id="run4">Виконати</button></p>
+<h2 id="task-4">Завдання 4: Парне чи непарне</h2>
 <div id="res4"></div>
 <script type="module">
 {
-  const res = document.getElementById("res4");
-  document.getElementById("run4").onclick = () => {
-    res.innerHTML = "";
-    function checkParity(num) {
-      const p = document.createElement('p');
-      const even = num % 2 === 0;
-      p.textContent = `Число ${num} — ${even ? 'парне' : 'непарне'}`;
-      p.style.color = even ? 'green' : 'red';
-      res.appendChild(p);
-    }
-    checkParity(4);
-  };
+const res = document.getElementById("res4");
+  function checkParity(num) {
+    const p = document.createElement('p');
+    const even = num % 2 === 0;
+    p.textContent = `Число ${num} — ${even ? 'парне' : 'непарне'}`;
+    p.style.color = even ? 'green' : 'red';
+    res.appendChild(p);
+  }
+  checkParity(4);
 }
 </script>
-<h2 id="task-5">Рівень 7-9, завдання 2</h2>
-<p><button id="run5">Виконати</button></p>
+<h2 id="task-5">Завдання 5: Пароль</h2>
 <div id="res5"></div>
 <script type="module">
 {
-  const res = document.getElementById("res5");
-  document.getElementById("run5").onclick = () => {
-    res.innerHTML = "";
-    function createPassword(name, num) {
-      return name.slice(0, 3) + num * 2;
-    }
-    const div = document.createElement('div');
-    div.textContent = createPassword('Любомир', 4);
-    res.appendChild(div);
-  };
+const res = document.getElementById("res5");
+  function createPassword(name, num) {
+    return name.slice(0, 3) + num * 2;
+  }
+  const div = document.createElement('div');
+  div.textContent = createPassword('Любомир', 4);
+  res.appendChild(div);
 }
 </script>
-<h2 id="task-6">Рівень 7-9, завдання 3</h2>
-<p><button id="run6">Виконати</button></p>
+<h2 id="task-6">Завдання 6: Середня оцінка</h2>
 <div id="res6"></div>
+<button id="run6">Ввести оцінки</button>
 <script type="module">
 {
-  const res = document.getElementById("res6");
-  document.getElementById("run6").onclick = () => {
-    res.innerHTML = "";
-    function average() {
-      const a = Number(prompt('Оцінка 1:'));
-      const b = Number(prompt('Оцінка 2:'));
-      const c = Number(prompt('Оцінка 3:'));
-      const div = document.createElement('div');
-      div.id = '4';
-      div.textContent = `Середнє: ${((a + b + c) / 3).toFixed(2)}`;
-      res.appendChild(div);
-    }
-    average();
-  };
+const res = document.getElementById("res6");
+document.getElementById("run6").onclick = () => {
+  res.innerHTML = "";
+  function average() {
+    const a = Number(prompt('Оцінка 1:'));
+    const b = Number(prompt('Оцінка 2:'));
+    const c = Number(prompt('Оцінка 3:'));
+    const div = document.createElement('div');
+    div.id = '4';
+    div.textContent = `Середнє: ${((a + b + c) / 3).toFixed(2)}`;
+    res.appendChild(div);
+  }
+  average();
+};
 }
 </script>
-<h2 id="task-7">Рівень 7-9, завдання 4</h2>
-<p><button id="run7">Виконати</button></p>
+<h2 id="task-7">Завдання 7: Введення студентів</h2>
 <div id="res7"></div>
+<button id="run7">Почати введення</button>
 <script type="module">
 {
-  const res = document.getElementById("res7");
-  document.getElementById("run7").onclick = () => {
-    res.innerHTML = "";
-    const count = Number(prompt('Скільки студентів у групі?'));
-    const list = document.createElement('ol');
-    res.appendChild(list);
-    for (let i = 1; i <= count; i++) {
-      const name = prompt(`Прізвище та ім’я студента ${i}:`);
-      const li = document.createElement('li');
-      li.textContent = name;
-      list.appendChild(li);
-    }
-  };
+const res = document.getElementById("res7");
+document.getElementById("run7").onclick = () => {
+  res.innerHTML = "";
+  const count = Number(prompt('Скільки студентів у групі?'));
+  const list = document.createElement('ol');
+  res.appendChild(list);
+  for (let i = 1; i <= count; i++) {
+    const name = prompt(`Прізвище та ім’я студента ${i}:`);
+    const li = document.createElement('li');
+    li.textContent = name;
+    list.appendChild(li);
+  }
+};
 }
 </script>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-02.html'">Наступна</button> </p>
