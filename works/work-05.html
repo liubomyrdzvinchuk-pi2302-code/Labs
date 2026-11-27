@@ -3,64 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 5</title>
+<title>ЛР №4</title>
 </head>
 <body>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-04.html'">Попередня</button> <button onclick="location.href='work-06.html'">Наступна</button> </p>
-<h1>Робота 5. CSS: блокова модель та позиціонування</h1>
-<h2 id="task-1">Завдання 1. Блокова модель</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.box{box-sizing:border-box;width:200px;height:100px;padding:15px;border:4px solid #2a5bd7;margin:20px auto;background:#e8efff}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&quot;box&quot;&gt;Блок 200×100&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 1"></iframe>
-<h2 id="task-2">Завдання 2. Display</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.i{background:#fdd}
-.ib{display:inline-block;width:120px;background:#dfd;padding:6px}
-.b{background:#ddf;margin-top:6px}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;span class=&quot;i&quot;&gt;inline&lt;/span&gt;&lt;span class=&quot;i&quot;&gt;inline&lt;/span&gt;
-&lt;div class=&quot;ib&quot;&gt;inline-block&lt;/div&gt;&lt;div class=&quot;ib&quot;&gt;inline-block&lt;/div&gt;
-&lt;div class=&quot;b&quot;&gt;block&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 2"></iframe>
-<h2 id="task-3">Завдання 3. Позиціонування</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.card{position:relative;width:200px;height:100px;border:1px solid #999;padding:12px}
-.badge{position:absolute;top:-10px;right:-10px;background:red;color:#fff;padding:3px 8px;border-radius:12px;font-size:12px}
-body{font-family:Arial,sans-serif;padding:12px};body{padding:30px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class=&quot;card&quot;&gt;Картка&lt;span class=&quot;badge&quot;&gt;NEW&lt;/span&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 3"></iframe>
+<h2 id="task-1">Завдання 1: Об’єкт book</h2>
+<div id="res1"></div>
+<script type="module">
+{
+const res = document.getElementById("res1");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const book = {
+    title: 'Harry Potter and the Sorcerer\'s Stone',
+    author: 'J.K. Rowling',
+    year: 1997,
+    isRead: true,
+    bookInfo() {
+      out(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? 'Так' : 'Ні'}`);
+    }
+  };
+  book.bookInfo();
+  book.isRead = !book.isRead;
+  book.bookInfo();
+}
+</script>
+<h2 id="task-2">Завдання 2: Масив library</h2>
+<div id="res2"></div>
+<script type="module">
+{
+const res = document.getElementById("res2");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const makeBook = (title, author, year, isRead) => ({
+    title, author, year, isRead,
+    bookInfo() {
+      out(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? 'Так' : 'Ні'}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  });
+  const makeLibrary = () => [
+    makeBook('Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 1997, true),
+    makeBook('The Hobbit', 'J.R.R. Tolkien', 1937, false),
+    makeBook('1984', 'George Orwell', 1949, false)
+  ];
+  const displayLibrary = lib => lib.forEach(b => b.bookInfo());
+  const library = makeLibrary();
+  displayLibrary(library);
+  out('— додаємо книгу —');
+  library.push(makeBook('Dune', 'Frank Herbert', 1965, false));
+  displayLibrary(library);
+}
+</script>
+<h2 id="task-3">Завдання 3: Методи масивів</h2>
+<div id="res3"></div>
+<script type="module">
+{
+const res = document.getElementById("res3");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const makeBook = (title, author, year, isRead) => ({
+    title, author, year, isRead,
+    bookInfo() {
+      out(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? 'Так' : 'Ні'}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  });
+  const makeLibrary = () => [
+    makeBook('Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 1997, true),
+    makeBook('The Hobbit', 'J.R.R. Tolkien', 1937, false),
+    makeBook('1984', 'George Orwell', 1949, false)
+  ];
+  const displayLibrary = lib => lib.forEach(b => b.bookInfo());
+  const library = makeLibrary();
+  library.sort((a, b) => a.year - b.year);
+  console.log(library);
+  out('За роком видання: ' + library.map(b => `${b.title} (${b.year})`).join(', '));
+  const unreadBooks = library.filter(b => !b.isRead);
+  console.log(unreadBooks);
+  out('Непрочитані: ' + unreadBooks.map(b => b.title).join(', '));
+  const tolkien = library.find(b => b.author === 'J.R.R. Tolkien');
+  console.log(tolkien);
+  out('Tolkien: ' + (tolkien ? tolkien.title : 'не знайдено'));
+}
+</script>
+<h2 id="task-4">Завдання 4: Додавання книги користувачем</h2>
+<div id="res4"></div>
+<button id="run4">Додати книгу</button>
+<script type="module">
+{
+const res = document.getElementById("res4");
+document.getElementById("run4").onclick = () => {
+  res.innerHTML = "";
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const makeBook = (title, author, year, isRead) => ({
+    title, author, year, isRead,
+    bookInfo() {
+      out(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? 'Так' : 'Ні'}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  });
+  const makeLibrary = () => [
+    makeBook('Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 1997, true),
+    makeBook('The Hobbit', 'J.R.R. Tolkien', 1937, false),
+    makeBook('1984', 'George Orwell', 1949, false)
+  ];
+  const displayLibrary = lib => lib.forEach(b => b.bookInfo());
+  const library = makeLibrary();
+  const title = prompt('Назва книги:');
+  const author = prompt('Автор:');
+  const year = Number(prompt('Рік видання:'));
+  const isRead = confirm('Книга прочитана? (Ок — так, Відміна — ні)');
+  library.push(makeBook(title, author, year, isRead));
+  displayLibrary(library);
+};
+}
+</script>
+<h2 id="task-5">Завдання 5: Метод markAsRead</h2>
+<div id="res5"></div>
+<script type="module">
+{
+const res = document.getElementById("res5");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const makeBook = (title, author, year, isRead) => ({
+    title, author, year, isRead,
+    bookInfo() {
+      out(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? 'Так' : 'Ні'}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  });
+  const makeLibrary = () => [
+    makeBook('Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 1997, true),
+    makeBook('The Hobbit', 'J.R.R. Tolkien', 1937, false),
+    makeBook('1984', 'George Orwell', 1949, false)
+  ];
+  const displayLibrary = lib => lib.forEach(b => b.bookInfo());
+  const book = makeBook('The Hobbit', 'J.R.R. Tolkien', 1937, false);
+  book.bookInfo();
+  book.markAsRead();
+  book.bookInfo();
+}
+</script>
+<h2 id="task-6">Завдання 6: Середній рік видання</h2>
+<div id="res6"></div>
+<script type="module">
+{
+const res = document.getElementById("res6");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const makeBook = (title, author, year, isRead) => ({
+    title, author, year, isRead,
+    bookInfo() {
+      out(`Назва: ${this.title}, Автор: ${this.author}, Рік видання: ${this.year}, Прочитана: ${this.isRead ? 'Так' : 'Ні'}`);
+    },
+    markAsRead() {
+      this.isRead = true;
+    }
+  });
+  const makeLibrary = () => [
+    makeBook('Harry Potter and the Sorcerer\'s Stone', 'J.K. Rowling', 1997, true),
+    makeBook('The Hobbit', 'J.R.R. Tolkien', 1937, false),
+    makeBook('1984', 'George Orwell', 1949, false)
+  ];
+  const displayLibrary = lib => lib.forEach(b => b.bookInfo());
+  const library = makeLibrary();
+  const calculateAverageYear = lib => lib.reduce((sum, b) => sum + b.year, 0) / lib.length;
+  out(`Середній рік видання: ${calculateAverageYear(library).toFixed(1)}`);
+}
+</script>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-04.html'">Попередня</button> <button onclick="location.href='work-06.html'">Наступна</button> </p>
 </body>
 </html>
