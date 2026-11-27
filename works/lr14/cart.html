@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="common.js"></script>
+  <script src="cart.js" defer></script>
+</head>
+<body>
+  <p>
+    <label for="lang-select" data-i18n="langLabel">Мова:</label>
+    <select id="lang-select"></select>
+  </p>
+
+  <h1 data-i18n="youChose">Ви обрали:</h1>
+
+  <div id="cart"></div>
+
+  <p>
+    <a href="#" id="pay" data-i18n="pay">Оплатити</a> |
+    <a href="index.html" data-i18n="backShop">Повернутись до покупок</a>
+  </p>
+</body>
+</html>
