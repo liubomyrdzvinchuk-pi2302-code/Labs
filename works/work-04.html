@@ -3,67 +3,144 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Робота 4</title>
+<title>ПР №1</title>
 </head>
 <body>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-03.html'">Попередня</button> <button onclick="location.href='work-05.html'">Наступна</button> </p>
-<h1>Робота 4. CSS: селектори, кольори, текст</h1>
-<h2 id="task-1">Завдання 1. Селектори</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-h2{color:#2a5bd7}
-.note{color:green;font-style:italic}
-#main{color:crimson;font-weight:bold}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;h2&gt;Заголовок&lt;/h2&gt;
-&lt;p class=&quot;note&quot;&gt;Клас note&lt;/p&gt;
-&lt;p id=&quot;main&quot;&gt;Елемент з id&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 1"></iframe>
-<h2 id="task-2">Завдання 2. Типографіка</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.t{font:20px/1.6 Georgia,serif;letter-spacing:1px;text-align:center;text-decoration:underline wavy #e91e63;text-transform:capitalize}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p class=&quot;t&quot;&gt;Красива типографіка робить текст читабельним.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 2"></iframe>
-<h2 id="task-3">Завдання 3. Псевдокласи</h2>
-<iframe width="100%" height="200" frameborder="0" style="border:0" sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;uk&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;title&gt;Завдання&lt;/title&gt;
-&lt;style&gt;
-.btn{padding:8px 16px;background:#333;color:#fff;text-decoration:none;border-radius:6px}
-.btn:hover{background:#e91e63}
-li:nth-child(odd){background:#eef}
-li:first-child{font-weight:bold}
-body{font-family:Arial,sans-serif;padding:12px}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Наведи мене&lt;/a&gt;
-&lt;ul&gt;&lt;li&gt;1&lt;/li&gt;&lt;li&gt;2&lt;/li&gt;&lt;li&gt;3&lt;/li&gt;&lt;li&gt;4&lt;/li&gt;&lt;/ul&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-" title="Завдання 3"></iframe>
+<h2 id="task-1">Завдання 1: Фільтрація та пошук товарів</h2>
+<div id="res1"></div>
+<button id="run1">Показати товари та знайти товар</button>
+<script type="module">
+{
+const res = document.getElementById("res1");
+document.getElementById("run1").onclick = () => {
+  res.innerHTML = "";
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const products = [
+    { name: 'Ноутбук', category: 'Електроніка', price: 30000, inStock: 5 },
+    { name: 'Миша', category: 'Електроніка', price: 500, inStock: 0 },
+    { name: 'Стілець', category: 'Меблі', price: 2500, inStock: 12 },
+    { name: 'Лампа', category: 'Меблі', price: 800, inStock: 0 },
+    { name: 'Книга', category: 'Книги', price: 300, inStock: 20 }
+  ];
+  const getAvailableProducts = () => products.filter(p => p.inStock > 0);
+  const findProductByName = name =>
+    products.find(p => p.name.toLowerCase() === name.toLowerCase()) || 'Товар не знайдено';
+  out('В наявності:');
+  getAvailableProducts().forEach(p => out(`${p.name} — ${p.price} грн, ${p.inStock} шт.`));
+  const found = findProductByName(prompt('Назва товару:') || '');
+  out(typeof found === 'string' ? found : `Знайдено: ${found.name}, ${found.category}, ${found.price} грн, ${found.inStock} шт.`);
+};
+}
+</script>
+<h2 id="task-2">Завдання 2: Групування та сортування студентів</h2>
+<div id="res2"></div>
+<script type="module">
+{
+const res = document.getElementById("res2");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const students = [
+    { name: 'Оля', age: 19, grade: 11, group: 'ПІ-21' },
+    { name: 'Іван', age: 20, grade: 8, group: 'ПІ-22' },
+    { name: 'Марія', age: 19, grade: 12, group: 'ПІ-21' },
+    { name: 'Петро', age: 21, grade: 9, group: 'ПІ-22' },
+    { name: 'Анна', age: 20, grade: 10, group: 'ПІ-23' }
+  ];
+  const groupBy = arr => arr.reduce((acc, s) => {
+    if (!acc[s.group]) acc[s.group] = [];
+    acc[s.group].push(s);
+    return acc;
+  }, {});
+  const sortStudentsByGrade = arr => [...arr].sort((a, b) => b.grade - a.grade);
+  const groups = groupBy(students);
+  for (const g in groups) out(`${g}: ${groups[g].map(s => s.name).join(', ')}`);
+  out('За оцінками (спадання):');
+  sortStudentsByGrade(students).forEach(s => out(`${s.name} — ${s.grade}`));
+}
+</script>
+<h2 id="task-3">Завдання 3: Статистика по працівниках</h2>
+<div id="res3"></div>
+<script type="module">
+{
+const res = document.getElementById("res3");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const employees = [
+    { name: 'Олег', position: 'Розробник', salary: 40000, years: 3 },
+    { name: 'Ірина', position: 'Тестувальник', salary: 30000, years: 5 },
+    { name: 'Максим', position: 'Дизайнер', salary: 35000, years: 2 },
+    { name: 'Світлана', position: 'Менеджер', salary: 45000, years: 8 }
+  ];
+  const getAverageSalary = arr => arr.reduce((s, e) => s + e.salary, 0) / arr.length;
+  const findMostExperiencedEmployee = arr => arr.reduce((best, e) => e.years > best.years ? e : best);
+  out(`Середня зарплата: ${getAverageSalary(employees)} грн`);
+  const top = findMostExperiencedEmployee(employees);
+  out(`Найбільший досвід: ${top.name}, ${top.position}, ${top.years} років`);
+}
+</script>
+<h2 id="task-4">Завдання 4: Книги</h2>
+<div id="res4"></div>
+<script type="module">
+{
+const res = document.getElementById("res4");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const books = [
+    { title: 'Кобзар', author: 'Шевченко', year: 1840, rating: 5, isRead: true },
+    { title: 'Гайдамаки', author: 'Шевченко', year: 1841, rating: 4, isRead: false },
+    { title: 'Intermezzo', author: 'Коцюбинський', year: 1909, rating: 4.5, isRead: false },
+    { title: 'Лісова пісня', author: 'Леся Українка', year: 1911, rating: 4.8, isRead: true },
+    { title: 'Тіні забутих предків', author: 'Коцюбинський', year: 1911, rating: 4.7, isRead: true }
+  ];
+  const getUnreadBooks = arr => arr.reduce((acc, b) => { if (!b.isRead) acc.push(b.title); return acc; }, []);
+  const getBooksByAuthor = (arr, author) => arr.filter(b => b.author === author).sort((a, b) => a.year - b.year);
+  const getTopRatedBooks = arr => arr.filter(b => b.rating > 4).sort((a, b) => b.rating - a.rating);
+  out('Непрочитані: ' + getUnreadBooks(books).join(', '));
+  out('Коцюбинський: ' + getBooksByAuthor(books, 'Коцюбинський').map(b => `${b.title} (${b.year})`).join(', '));
+  out('Рейтинг вище 4: ' + getTopRatedBooks(books).map(b => `${b.title} (${b.rating})`).join(', '));
+}
+</script>
+<h2 id="task-5">Завдання 5: Замовлення клієнтів</h2>
+<div id="res5"></div>
+<script type="module">
+{
+const res = document.getElementById("res5");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const orders = [
+    { orderId: 1, customer: { name: 'Олена', email: 'olena@mail.com' }, items: ['Книга', 'Ручка'], total: 350 },
+    { orderId: 2, customer: { name: 'Андрій', email: 'andriy@mail.com' }, items: ['Ноутбук'], total: 30000 },
+    { orderId: 3, customer: { name: 'Олена', email: 'olena@mail.com' }, items: ['Миша'], total: 500 }
+  ];
+  const getTotalSpentByCustomer = (arr, name) =>
+    arr.filter(o => o.customer.name === name).reduce((sum, o) => sum + o.total, 0);
+  out(`Олена витратила: ${getTotalSpentByCustomer(orders, 'Олена')} грн`);
+  out(`Андрій витратив: ${getTotalSpentByCustomer(orders, 'Андрій')} грн`);
+}
+</script>
+<h2 id="task-6">Завдання 6: Підрахунок продажів</h2>
+<div id="res6"></div>
+<script type="module">
+{
+const res = document.getElementById("res6");
+  const out = t => { const p = document.createElement('p'); p.textContent = t; res.appendChild(p); };
+  const products = [
+    { productId: 1, name: 'Ноутбук', price: 30000 },
+    { productId: 2, name: 'Миша', price: 500 },
+    { productId: 3, name: 'Клавіатура', price: 1200 }
+  ];
+  const purchases = [
+    { purchaseId: 1, productId: 1, quantity: 2 },
+    { purchaseId: 2, productId: 2, quantity: 5 },
+    { purchaseId: 3, productId: 1, quantity: 1 },
+    { purchaseId: 4, productId: 3, quantity: 3 }
+  ];
+  const getTotalSales = (products, purchases) => purchases.reduce((acc, p) => {
+    const product = products.find(x => x.productId === p.productId);
+    if (product) acc[product.name] = (acc[product.name] || 0) + product.price * p.quantity;
+    return acc;
+  }, {});
+  const sales = getTotalSales(products, purchases);
+  for (const name in sales) out(`${name}: ${sales[name]} грн`);
+}
+</script>
 <p><button onclick="location.href='../index.html'">Головна</button> <button onclick="location.href='work-03.html'">Попередня</button> <button onclick="location.href='work-05.html'">Наступна</button> </p>
 </body>
 </html>
