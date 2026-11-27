@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Робота 1. HTML: структура сторінки</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!--w-->
+<div class="wrap">
+<nav class="top"><span></span><a href="../index.html">☰ Усі роботи</a><a href="work-02.html">Робота 2 →</a></nav>
+<h1>Робота 1. HTML: структура сторінки</h1>
+<p style="color:var(--mut)">Базовий каркас, заголовки, абзаци та семантичні теги.</p>
+<section class="task">
+<h2>Завдання 1. Візитка</h2>
+<p class="cond">Створіть сторінку-візитку із заголовком h1, підзаголовком h2 та двома абзацами про себе.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Іван Петренко&lt;/h1&gt;
+&lt;h2&gt;Студент, веб-розробник&lt;/h2&gt;
+&lt;p&gt;Мене звати &lt;b&gt;Іван&lt;/b&gt;, навчаюся на 2 курсі.&lt;/p&gt;
+&lt;p&gt;Цікавлюся &lt;i&gt;HTML, CSS та JavaScript&lt;/i&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Іван Петренко&lt;/h1&gt;
+&lt;h2&gt;Студент, веб-розробник&lt;/h2&gt;
+&lt;p&gt;Мене звати &lt;b&gt;Іван&lt;/b&gt;, навчаюся на 2 курсі.&lt;/p&gt;
+&lt;p&gt;Цікавлюся &lt;i&gt;HTML, CSS та JavaScript&lt;/i&gt;.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 1"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 2. Семантична розмітка</h2>
+<p class="cond">Розбийте сторінку на header, nav, main, section та footer.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;&lt;h1&gt;Мій блог&lt;/h1&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;a href=&quot;#a&quot;&gt;Про мене&lt;/a&gt; | &lt;a href=&quot;#b&quot;&gt;Статті&lt;/a&gt;&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section id=&quot;a&quot;&gt;&lt;h2&gt;Про мене&lt;/h2&gt;&lt;p&gt;Пишу про веб.&lt;/p&gt;&lt;/section&gt;
+  &lt;section id=&quot;b&quot;&gt;&lt;h2&gt;Статті&lt;/h2&gt;&lt;p&gt;Скоро з’являться.&lt;/p&gt;&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;&lt;small&gt;© 2026&lt;/small&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header&gt;&lt;h1&gt;Мій блог&lt;/h1&gt;&lt;/header&gt;
+&lt;nav&gt;&lt;a href=&quot;#a&quot;&gt;Про мене&lt;/a&gt; | &lt;a href=&quot;#b&quot;&gt;Статті&lt;/a&gt;&lt;/nav&gt;
+&lt;main&gt;
+  &lt;section id=&quot;a&quot;&gt;&lt;h2&gt;Про мене&lt;/h2&gt;&lt;p&gt;Пишу про веб.&lt;/p&gt;&lt;/section&gt;
+  &lt;section id=&quot;b&quot;&gt;&lt;h2&gt;Статті&lt;/h2&gt;&lt;p&gt;Скоро з’являться.&lt;/p&gt;&lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;&lt;small&gt;© 2026&lt;/small&gt;&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 2"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 3. Посилання та якорі</h2>
+<p class="cond">Зробіть зміст із якірними посиланнями на розділи та зовнішнє посилання, що відкривається в новій вкладці.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#s1&quot;&gt;Розділ 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#s2&quot;&gt;Розділ 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;s1&quot;&gt;Розділ 1&lt;/h2&gt;&lt;p&gt;Текст першого розділу.&lt;/p&gt;
+&lt;h2 id=&quot;s2&quot;&gt;Розділ 2&lt;/h2&gt;&lt;p&gt;Текст другого розділу.&lt;/p&gt;
+&lt;a href=&quot;https://developer.mozilla.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MDN Web Docs&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#s1&quot;&gt;Розділ 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#s2&quot;&gt;Розділ 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;s1&quot;&gt;Розділ 1&lt;/h2&gt;&lt;p&gt;Текст першого розділу.&lt;/p&gt;
+&lt;h2 id=&quot;s2&quot;&gt;Розділ 2&lt;/h2&gt;&lt;p&gt;Текст другого розділу.&lt;/p&gt;
+&lt;a href=&quot;https://developer.mozilla.org&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;MDN Web Docs&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 3"></iframe></div>
+</div>
+</section>
+<nav class="top"><span></span><a href="../index.html">☰ Усі роботи</a><a href="work-02.html">Робота 2 →</a></nav>
+</div>
+</body>
+</html>

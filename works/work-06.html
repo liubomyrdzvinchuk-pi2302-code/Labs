@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Робота 6. CSS: Flexbox</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!--w-->
+<div class="wrap">
+<nav class="top"><a href="work-05.html">← Робота 5</a><a href="../index.html">☰ Усі роботи</a><a href="work-07.html">Робота 7 →</a></nav>
+<h1>Робота 6. CSS: Flexbox</h1>
+<p style="color:var(--mut)">Гнучкі контейнери: напрям, вирівнювання, перенесення.</p>
+<section class="task">
+<h2>Завдання 1. Горизонтальне меню</h2>
+<p class="cond">Зробіть навігаційне меню з рівномірними відступами через flex.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+.menu{display:flex;justify-content:space-between;background:#222;padding:10px 20px}
+.menu a{color:#fff;text-decoration:none}
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav class=&quot;menu&quot;&gt;&lt;a href=&quot;#&quot;&gt;Головна&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Про нас&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Контакти&lt;/a&gt;&lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+.menu{display:flex;justify-content:space-between;background:#222;padding:10px 20px}
+.menu a{color:#fff;text-decoration:none}
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;nav class=&quot;menu&quot;&gt;&lt;a href=&quot;#&quot;&gt;Головна&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Про нас&lt;/a&gt;&lt;a href=&quot;#&quot;&gt;Контакти&lt;/a&gt;&lt;/nav&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 1"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 2. Центрування</h2>
+<p class="cond">Відцентруйте блок по горизонталі та вертикалі.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+.wrap{display:flex;justify-content:center;align-items:center;height:160px;background:#eef}
+.c{background:#2a5bd7;color:#fff;padding:20px}
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;wrap&quot;&gt;&lt;div class=&quot;c&quot;&gt;Центр&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+.wrap{display:flex;justify-content:center;align-items:center;height:160px;background:#eef}
+.c{background:#2a5bd7;color:#fff;padding:20px}
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;wrap&quot;&gt;&lt;div class=&quot;c&quot;&gt;Центр&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 2"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 3. Картки з переносом</h2>
+<p class="cond">Розмістіть 6 карток, що переносяться на новий рядок (flex-wrap) та розтягуються (flex-grow).</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.row div{flex:1 1 120px;background:#cfe3ff;padding:20px;text-align:center}
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;row&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+.row{display:flex;flex-wrap:wrap;gap:10px}
+.row div{flex:1 1 120px;background:#cfe3ff;padding:20px;text-align:center}
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;row&quot;&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;5&lt;/div&gt;&lt;div&gt;6&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 3"></iframe></div>
+</div>
+</section>
+<nav class="top"><a href="work-05.html">← Робота 5</a><a href="../index.html">☰ Усі роботи</a><a href="work-07.html">Робота 7 →</a></nav>
+</div>
+</body>
+</html>

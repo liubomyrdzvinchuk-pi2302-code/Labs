@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Робота 10. JavaScript: змінні, умови, функції</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!--w-->
+<div class="wrap">
+<nav class="top"><a href="work-09.html">← Робота 9</a><a href="../index.html">☰ Усі роботи</a><a href="work-11.html">Робота 11 →</a></nav>
+<h1>Робота 10. JavaScript: змінні, умови, функції</h1>
+<p style="color:var(--mut)">Типи даних, розгалуження, цикли, функції.</p>
+<section class="task">
+<h2>Завдання 1. Змінні та вивід</h2>
+<p class="cond">Оголосіть змінні різних типів і виведіть їх на сторінку.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
+&lt;script&gt;
+const name=&#x27;Іван&#x27;;
+let age=19;
+const ok=true;
+document.getElementById(&#x27;o&#x27;).textContent=
+  `Ім&#x27;я: ${name}\nВік: ${age}\nСтудент: ${ok}\nТип віку: ${typeof age}`;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
+&lt;script&gt;
+const name=&#x27;Іван&#x27;;
+let age=19;
+const ok=true;
+document.getElementById(&#x27;o&#x27;).textContent=
+  `Ім&#x27;я: ${name}\nВік: ${age}\nСтудент: ${ok}\nТип віку: ${typeof age}`;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 1"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 2. Парне чи непарне</h2>
+<p class="cond">Напишіть функцію, що визначає парність числа, і перевірте її для чисел 1–6.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
+&lt;script&gt;
+function parity(n){ return n % 2 === 0 ? &#x27;парне&#x27; : &#x27;непарне&#x27;; }
+let out=&#x27;&#x27;;
+for(let i=1;i&lt;=6;i++) out+=i+&#x27; — &#x27;+parity(i)+&#x27;\n&#x27;;
+document.getElementById(&#x27;o&#x27;).textContent=out;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
+&lt;script&gt;
+function parity(n){ return n % 2 === 0 ? &#x27;парне&#x27; : &#x27;непарне&#x27;; }
+let out=&#x27;&#x27;;
+for(let i=1;i&lt;=6;i++) out+=i+&#x27; — &#x27;+parity(i)+&#x27;\n&#x27;;
+document.getElementById(&#x27;o&#x27;).textContent=out;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 2"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 3. Факторіал і Фібоначчі</h2>
+<p class="cond">Реалізуйте факторіал (рекурсія) та перші 10 чисел Фібоначчі (цикл).</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
+&lt;script&gt;
+const fact=n=&gt;n&lt;=1?1:n*fact(n-1);
+const fib=[0,1];
+for(let i=2;i&lt;10;i++) fib.push(fib[i-1]+fib[i-2]);
+document.getElementById(&#x27;o&#x27;).textContent=&#x27;5! = &#x27;+fact(5)+&#x27;\nFib: &#x27;+fib.join(&#x27;, &#x27;);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;pre id=&quot;o&quot;&gt;&lt;/pre&gt;
+&lt;script&gt;
+const fact=n=&gt;n&lt;=1?1:n*fact(n-1);
+const fib=[0,1];
+for(let i=2;i&lt;10;i++) fib.push(fib[i-1]+fib[i-2]);
+document.getElementById(&#x27;o&#x27;).textContent=&#x27;5! = &#x27;+fact(5)+&#x27;\nFib: &#x27;+fib.join(&#x27;, &#x27;);
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 3"></iframe></div>
+</div>
+</section>
+<nav class="top"><a href="work-09.html">← Робота 9</a><a href="../index.html">☰ Усі роботи</a><a href="work-11.html">Робота 11 →</a></nav>
+</div>
+</body>
+</html>

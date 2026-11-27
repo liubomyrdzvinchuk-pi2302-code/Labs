@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Робота 3. HTML: форми</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!--w-->
+<div class="wrap">
+<nav class="top"><a href="work-02.html">← Робота 2</a><a href="../index.html">☰ Усі роботи</a><a href="work-04.html">Робота 4 →</a></nav>
+<h1>Робота 3. HTML: форми</h1>
+<p style="color:var(--mut)">Поля введення, вибір, кнопки та атрибути валідації.</p>
+<section class="task">
+<h2>Завдання 1. Форма реєстрації</h2>
+<p class="cond">Створіть форму з іменем, email, паролем та кнопкою відправки (required).</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form onsubmit=&quot;event.preventDefault();alert(&#x27;Відправлено&#x27;)&quot;&gt;
+  &lt;p&gt;&lt;label&gt;Ім’я: &lt;input type=&quot;text&quot; name=&quot;name&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Пароль: &lt;input type=&quot;password&quot; minlength=&quot;6&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;button type=&quot;submit&quot;&gt;Зареєструватись&lt;/button&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form onsubmit=&quot;event.preventDefault();alert(&#x27;Відправлено&#x27;)&quot;&gt;
+  &lt;p&gt;&lt;label&gt;Ім’я: &lt;input type=&quot;text&quot; name=&quot;name&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Email: &lt;input type=&quot;email&quot; name=&quot;email&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;label&gt;Пароль: &lt;input type=&quot;password&quot; minlength=&quot;6&quot; required&gt;&lt;/label&gt;&lt;/p&gt;
+  &lt;button type=&quot;submit&quot;&gt;Зареєструватись&lt;/button&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 1"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 2. Вибір значень</h2>
+<p class="cond">Додайте радіокнопки, чекбокси та випадаючий список.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;p&gt;Стать:
+ &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;g&quot; checked&gt; Ч&lt;/label&gt;
+ &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;g&quot;&gt; Ж&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;Інтереси:
+ &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Web&lt;/label&gt;
+ &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Дизайн&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;select&gt;&lt;option&gt;Київ&lt;/option&gt;&lt;option&gt;Львів&lt;/option&gt;&lt;option&gt;Одеса&lt;/option&gt;&lt;/select&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;p&gt;Стать:
+ &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;g&quot; checked&gt; Ч&lt;/label&gt;
+ &lt;label&gt;&lt;input type=&quot;radio&quot; name=&quot;g&quot;&gt; Ж&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;Інтереси:
+ &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Web&lt;/label&gt;
+ &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt; Дизайн&lt;/label&gt;&lt;/p&gt;
+&lt;p&gt;&lt;select&gt;&lt;option&gt;Київ&lt;/option&gt;&lt;option&gt;Львів&lt;/option&gt;&lt;option&gt;Одеса&lt;/option&gt;&lt;/select&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 2"></iframe></div>
+</div>
+</section>
+<section class="task">
+<h2>Завдання 3. Різні типи input</h2>
+<p class="cond">Використайте типи date, range, color, number та textarea.</p>
+<div class="cols">
+<div><h4>Код розв’язку</h4><pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;p&gt;&lt;input type=&quot;date&quot;&gt; &lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot; value=&quot;5&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt; &lt;input type=&quot;color&quot; value=&quot;#ff8800&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;textarea rows=&quot;3&quot; cols=&quot;30&quot; placeholder=&quot;Коментар&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<div><h4>Результат</h4><iframe sandbox="allow-scripts allow-modals" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;uk&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Завдання&lt;/title&gt;
+&lt;style&gt;
+body{font-family:Arial,sans-serif;padding:12px}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+&lt;p&gt;&lt;input type=&quot;date&quot;&gt; &lt;input type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot; value=&quot;5&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot;&gt; &lt;input type=&quot;color&quot; value=&quot;#ff8800&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;textarea rows=&quot;3&quot; cols=&quot;30&quot; placeholder=&quot;Коментар&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+" title="Результат завдання 3"></iframe></div>
+</div>
+</section>
+<nav class="top"><a href="work-02.html">← Робота 2</a><a href="../index.html">☰ Усі роботи</a><a href="work-04.html">Робота 4 →</a></nav>
+</div>
+</body>
+</html>
